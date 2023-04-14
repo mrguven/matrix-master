@@ -1,0 +1,86 @@
+
+
+body{
+    width: 1000px;
+}
+
+.main-div {
+    display: grid;
+    grid-template-columns: 30% 70%;
+   
+}
+.arr {
+    margin-bottom: 10px;
+   
+}
+.offers {
+    margin: 3px;
+    position: relative;
+    left: 90px;
+}
+
+.gabsplace img {
+    max-width: 400px;
+    
+}
+
+.gabsplace {
+    display: inline-block;
+    position: relative;
+    bottom: 50px;
+    
+
+}
+
+.otherOffers {
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    font-size: small;
+    line-height: 17px;
+}
+
+.otherOffers a {
+    text-decoration: none;
+    color: rgb(58, 52, 52);
+      
+}
+
+.gabby {
+    display: inline-block;
+    
+}
+.gabby2 {
+    display: inline-block;
+}
+
+
+.frances  { 
+    padding-bottom: 1px;
+}
+    
+
+.wash {
+    padding-top: 2px;
+}
+
+.paris {
+    padding-top: 10px;
+
+}
+
+.as-seen {
+    display: inline-block;
+}
+
+.href {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+}.href a {
+    margin-left: 20px;
+}
+
+.offer-2 a {
+    text-decoration: none;
+}

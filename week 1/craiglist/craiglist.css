@@ -1,0 +1,167 @@
+
+
+.main-container {
+    background-color: rgb(217, 224, 233);
+    width: 1000px;
+    height: 650px;
+    }
+    
+.first-line {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    margin-bottom: 30px;
+    padding-top: 8px;
+    
+}
+.sub-first-line {
+    display: inline-block;
+    height: 20px;
+    margin-left: 10%;
+}
+
+.sub-first-line h1 {
+    background-color: rgb(206, 218, 235);
+    position: relative;
+    bottom: 20px;
+}
+
+.sub-first-line-1  {
+    font-size: xx-large;
+    text-align: center;
+}
+
+
+.othercraigslist {
+    position: relative;
+    left: 85px;
+}
+
+.main-bar {
+    
+    display: grid;
+    grid-template-columns:  25% 22% 26% 26%;
+   
+        
+}
+
+.nav-bar {
+    background-color: rgb(206, 218, 235);
+    margin-top: 15px;
+    margin-left: 15px;
+    height: 520px;
+}
+
+.nav-bar li {
+    list-style: none;
+    padding: 3px;
+}
+
+.nav-bar ul a {
+    background-color: aliceblue;
+}
+
+.search-bar {
+    background-color: rgb(178, 196, 221);
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.search-bar label {
+    background-color: aliceblue;
+    font-size: larger;
+}
+
+.feed {
+    text-align: center;
+    position: relative;
+    right: 20px;
+}
+.feed ul li { 
+    margin-top: 10px;
+}
+
+.feed p {
+    margin-left: 20px;
+    padding-left: 25px;
+}
+
+.btn {
+    border-radius: 15px;
+    border-style: none;
+}
+
+.btn:hover {
+    background-color: rgb(171, 171, 216);
+}
+
+.feed ul a:not(#exception) {
+    background-color: rgb(206, 218, 235);
+}
+
+.sec-col {
+    width: 250px;
+}
+
+.t-col {
+    width: 290px;
+}
+
+.s-row li {
+ list-style: none;
+ padding-top: 5px;
+}
+
+
+.f-row li {
+    list-style: none;
+    padding-top: 5px;
+}
+
+
+
+.f-row {
+    font-size: larger;
+    line-height: 14px;
+}
+
+.f-row ul li:first-child {
+    background-color:rgb(206, 218, 235) ;
+}
+.s-row ul li:first-child {
+    background-color:rgb(206, 218, 235) ;
+}
+
+.s-row {
+    
+    font-size: larger;
+    line-height: 14px;
+    position: relative;
+    bottom: 10px;
+}
+
+.f-row li {
+    background-color: aliceblue;
+    margin:1px;
+    padding-left: 5px;
+}
+
+.s-row li:not(.exc) {
+    background-color: aliceblue;
+    margin:1px;
+    padding-left: 5px;
+}
+
+.exc {
+    background-color: rgb(217, 224, 233);
+    padding-left: 5px;
+    position: relative;
+    top: 30px;
+    
+}
+
+
+
+
+
