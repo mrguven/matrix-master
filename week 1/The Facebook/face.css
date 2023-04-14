@@ -1,0 +1,261 @@
+
+body{
+    font-family: Tahoma ;
+}
+.nav-bar {
+    background-color: rgb(59,89,152);
+    color: white;
+    height: 60px;
+}
+
+.nav-bar-right button {
+    background-color:rgb(120,140,184) ;
+    color: white;
+    border-color:rgb(120,140,184) ;
+    font-weight: 600;
+
+}
+.nav-bar-left {
+    display: inline-block;
+    margin-right: 250px;
+    margin-left: 300px;
+    font-size: large;
+    
+    
+}
+
+.nav-bar-right {
+    display: inline-block;
+}
+
+
+.nav-bar-email {
+    display: inline-block;
+}
+.nav-bar-password {
+    display: inline-block;
+}
+
+.main-container {
+    background-image: linear-gradient(to top, rgb(210,216,232) , rgb(255,255,255));
+    padding-top: 30px;
+}
+
+.sub-main-container-left {
+    display: inline-block;
+    width: 30% ;
+    margin-left: 300px;
+}
+
+.sub-main-container-left h4 {
+    color: rgb(18, 37, 80) ;
+}
+
+
+
+.sub-main-container-right {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+
+
+
+.signup-text {
+    border-bottom: 1px solid;
+    border-color:  rgb(59,89,152);
+    width: 380px;
+}
+
+
+.signup-form {
+    display: block;
+    padding-top: 10px;
+
+}
+
+.signup-form label {
+    display: inline-block;
+   width: 90px;
+    text-align: right;
+    font-size: 14px;
+    padding-top: 5px;
+    
+}
+
+.reemail label {
+    font-size: 14px;
+    vertical-align: bottom;
+    height: 26px;
+}
+
+.password {
+    margin-top:5px;
+}
+
+.password label {
+    width:89px ;
+    height: 26px;
+    vertical-align: bottom;
+    margin-right: 1px;
+}
+
+.signup-form input {
+    display: inline-block;
+    height: 20px;
+    width: 270px;
+}
+
+.signup-form a {
+    text-decoration: none;
+}
+.signup-form p {
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+#createpage {
+    color:rgb(38, 83, 179) ;
+    margin-right: 90px;
+}
+
+#createpage a {
+    color: rgb(103,165,75);
+    text-decoration: none;
+}
+
+.signup-text p {
+    line-height: 10px;
+    padding-bottom: 2px;
+    
+}
+
+.explain-text {
+    margin-left: 90px;
+    margin-top: 4px;
+    font-size: 13px;
+}
+.explain-text p {
+    padding-right: 230px;
+    text-align: left;
+}
+
+.explain-text a {
+    color: rgb(57, 76, 117);
+    
+}
+
+.sign-up-button {
+    padding-bottom: 20px;
+    border-bottom: 1px solid;
+    border-color: rgb(59,89,152);
+    width: 400px;
+    
+}
+
+.sign-up-button button {
+    background-color: rgb(103,165,75);
+    border: 1px solid rgb(67, 102, 82);
+    padding: 5px 30px;
+    color: white;
+    font-weight: 900;
+    margin-left: 90px;
+    margin-top: 20px;
+
+}
+
+.language {
+    display: block;
+    text-decoration: none;
+    list-style: none;
+    font-size: small;
+    border-bottom: 1px solid;
+    border-color:  rgb(59,89,152);
+    width: 70%;
+    margin-left: 150px;
+    
+}
+
+.sub-footer {
+    display: block;
+    width: 70%;
+    margin-left: 150px;
+
+}
+
+.language ul {
+    margin-left: 30px;
+    
+}
+.language ul li a {
+    text-decoration: none;
+    
+}
+
+.language ul li {
+    list-style: none;
+    display: inline;
+    text-align: center;
+    padding-left: 15px;
+
+}
+
+.language ul li:last-child {
+    border: 0 solid;
+    background-color: rgb(236,239,245);
+    padding-right: 15px;
+    margin-left: 5px;
+    padding-bottom: 10px;
+    
+}
+.facebook {
+    display: inline-block;
+    width: 20%;
+    margin-left: 90px ;
+    font-size: small;
+    vertical-align: top;
+}
+
+.facebook a {
+    text-decoration: none;
+}
+
+.last-elements {
+    display: inline-block;
+    width: 60%;
+    font-size: small;
+    margin-left: 60px;
+    text-align: justify;
+}
+
+
+.last-elements ul {
+    margin-left: 5px;
+    
+}
+.last-elements ul li {
+    display: inline;
+    border-left: 1px;
+    
+}
+    
+
+.last-elements ul li a{
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.last-elements-1 {
+    display: block;
+    height: 7px;
+    text-align: right;
+} 
+
+.last-elements-2  {
+    display: block;
+    height: 20px;
+    text-align: right;
+
+}

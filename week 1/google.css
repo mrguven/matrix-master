@@ -1,0 +1,128 @@
+
+.main-container {
+    border-top: 1px;
+    border-top-style: solid;
+}
+
+.google {
+    display: block;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 70px;
+}
+
+.search-bar {
+
+  line-height: 1%;
+  background-color: rgb(231, 243, 238);
+  height: 100px;
+  margin-left: 2%;
+  margin-right: 2%;
+  
+}
+.search-bar p {
+    text-align: center;
+    
+    padding-top: 20px;
+
+}
+.search-bar input {
+    position: relative;
+    left: 40%;
+    
+}
+
+.input1 {
+    position: relative;
+    left: 40%;
+    padding: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 1px;
+}
+
+.search {
+    box-shadow: 2px 2px 2px rgb(220, 205, 233);
+    border-radius: 4px;
+    border-color: rgb(167, 167, 238);
+    justify-content: center;
+}
+
+.lucky {
+    box-shadow: 2px 2px 2px rgb(215, 194, 235); 
+    border-radius: 4px;
+    border-color: rgb(147, 147, 233);
+    justify-content: center;
+}
+
+
+.nav-bar {
+    margin-left: 2%;
+    margin-right: 2%;
+    display: grid;
+    grid-template-columns: auto auto auto ;
+   grid-column-gap: 3px ;
+    height: 150px;
+    margin-top: 3px;
+}
+
+.f-cloumn {
+   
+    background-color: rgb(170, 205, 236);
+    text-align: center;
+    padding-top:70px;
+    padding-bottom: 30px;
+   
+}
+
+.f-cloumn a {    display: block;
+}
+
+.nota {
+    text-decoration: none;
+}
+
+.s-cloumn {
+    
+    background-color: rgb(106, 148, 148);
+    
+    text-align: center;
+    padding-top:52px;
+    padding-bottom: 27px;
+}
+
+.s-cloumn a {
+    display: block;
+}
+
+.t-cloumn {
+   
+    background-color: rgb(129, 157, 184);
+    grid-template-columns: 33%;
+    text-align: center;
+    padding-top:16px;
+    padding-bottom: 25px;
+}
+
+.t-cloumn button {
+    box-shadow: 2px 2px 2px rgb(54, 56, 88); 
+    border-radius: 4px;
+    border-color: rgb(147, 147, 233);
+    margin-right: 7px;
+}
+
+li {
+    list-style: none;
+}
+
+
+.copyright {
+    text-align: center;
+    font-size: 10px;
+}
+
+
+.google2 img {
+    width: 100%;
+    max-width: 700px;
+}

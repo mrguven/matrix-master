@@ -1,0 +1,189 @@
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6em;
+}
+
+.tag{ 
+    text-align: center;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 420%;
+    color: rgb(105, 103, 226);
+    text-shadow: 2px 2px;
+    
+}
+
+
+.head {
+    background-color:rgb(206, 202, 223);
+   width: 25%;
+    height: auto;
+    text-align: left;
+    margin: 10px ;
+    padding: 10px ;
+    float: left;
+    box-sizing: border-box;
+    
+}
+.vdo {
+    
+  width: 70%;
+  height: auto;
+    margin: 5px;
+    padding: 5px;
+    float: right;
+    box-sizing: border-box;
+    
+    
+}
+.vdo1 {
+    
+    max-width: 800px;
+    width: 100%;
+    height: 400px;
+}
+
+
+
+
+.head a {
+    color: rgb(3, 12, 51);
+    font-size: 20px;
+    padding: 0.5px;
+    list-style: none;
+    text-decoration: none;
+     
+}
+
+a :visited {
+    color: blue;
+}
+:active {
+    color: brown;
+}
+
+
+.head a:hover {
+    color: rgb(69, 179, 105); 
+    
+
+}
+
+
+.text {
+    display: grid;
+    grid-template-columns: 50% 50% ;
+    background-color: rgb(243, 229, 229);
+    clear: both;
+    text-align: justify;
+
+    
+}
+
+.text1, .text2, .text3, .text4,.text5, .text6 {
+
+    border: 3px;
+    border-style: double;
+    border-radius: 30px;
+    border-color: rgb(216, 174, 174);
+    
+    padding: 30px;
+
+    
+    
+    
+}
+
+.text img {
+float: left;
+width:auto;
+}
+
+.lista { 
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-image: url(download\ \(3\).jpg);
+   background-size: contain;
+   font-style: oblique;
+   
+    width: 100%;
+    
+    font-weight: 1000;
+    color: rgb(76, 52, 102);
+    
+ }
+
+
+  
+.list {
+    border: 2px;
+    border-style: double;
+    border-radius: 20px;
+}
+
+.list2 {
+    border: 2px;
+    border-style: double;
+    border-radius: 20px;
+    
+}
+
+
+.list2_ {
+list-style-type: circle;
+
+
+}
+
+.mate {
+width: 50%;
+border: 2px;
+border-style: double;
+border-radius: 20px;
+}
+
+.form {
+    width: 50%;
+    border: 1px;
+    border-style: groove;
+    border-top-left-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(246, 247, 250);
+}
+
+.message {
+    padding: 10px;
+}
+.message1 {
+
+padding: 10px;
+
+}
+
+.aim {
+    text-align: left;
+    text-shadow: 0.5px 1px;
+}
+
+.visit {
+    text-align: left;
+    width: 50%;
+    padding: 10px;
+    text-shadow: 0.5px 1px;
+}
+
+h6:hover {
+    color: blueviolet;
+    
+}
+img:hover {
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+h4 {
+    color: blueviolet;
+}

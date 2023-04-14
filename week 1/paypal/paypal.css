@@ -1,0 +1,296 @@
+
+
+.paypalBlock {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+   padding-left: 50px;
+    width: 35%;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.signup {
+    margin-left: 550px;
+    padding-top: 20px;
+    width: 64%;
+    
+}
+
+.signup a:not(:first-child) {
+    margin-left: 10px;
+    border-left: 2px solid;
+    padding-left: 15px;
+}
+
+.nav-bar {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    padding-left: 70px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    
+    
+}
+
+.sub-welcome {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(51,102,153);
+    margin-bottom: 10px;
+    
+}
+
+.nav-bar a {
+    margin-left: 2px;
+    font-size: larger;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    border-top: 3px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+ }
+
+
+
+ .nav-bar a:first-child {
+    background-color:rgb(51,102,153);
+ }
+ .nav-bar a:not(:first-child) {
+    background-color: rgb(0,51,102);
+
+ }
+
+.nav-bar a {
+    background-color: rgb(228, 233, 238);
+}
+
+.left-bar {
+    margin-left: 75px;
+    width: 20%;
+    display: inline-block;
+}
+
+.left-bar p b {
+    margin-left: 10px;
+}
+.exc {
+    background-color: rgb(204,204,204);
+    height:30px;
+    padding-top: 5px;
+}
+
+.login-bar {
+    background-color: rgb(238,238,238);
+    display: block;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
+.sub-left-bar {
+    display: block;
+    background-color: rgb(238,238,238);
+}
+
+.sub-left-img {
+    display: block;
+    background-color: white !important; 
+    padding-top: 30px;
+}
+
+.left-img {
+    display: inline-block;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.login-bar ul li::marker{
+    content: "▶";
+   color:rgb(51,102,153);
+}
+
+.login-bar button {
+    margin-left: 40px;
+    box-shadow: 1px 1px 3px;
+    border: 2px solid rgb(202, 190, 190);
+    background-color: rgb(204,204,204);
+    border-radius: 2px;
+}
+
+.login-bar button:hover {
+    background-color: rgb(170, 171, 228);
+}
+
+
+.news-1 a{
+    padding-left: 120px;
+    
+}
+
+.news-2 p {
+    margin-left:120px;
+    font-size: smaller;
+}
+
+.news-2 a{
+    font-size: 16px;
+    margin-left: 10px;
+    
+}
+
+.right-bar {
+    display: inline-block;
+    width: 60%;
+    vertical-align: top;
+    margin-left:30px;
+}
+
+.right-bar h1 {
+    color:rgb(51,102,153);
+}
+
+
+
+.first-right-bar {
+    display: inline-block;
+    width: 60%;
+    font-size: larger;
+    line-height: 10px;
+}
+
+.first-right-bar p {
+    margin-bottom: 30px;
+    
+}
+.first-right-bar a {
+    font-size: larger;
+    color:rgb(30, 128, 226);
+    
+}
+
+.rond-text {
+    display: inline-block;
+   width: 35% ; 
+   border: 20px;
+   border-radius: 90% 90% 90% 90%;
+   text-shadow: 1px 1px;
+  font-style: italic;
+   background-color:rgb(51,102,153) ; 
+   text-align: center;
+   color: white;
+   font-size: 30px;
+   letter-spacing: 2px;
+
+}
+
+.account {
+    text-align: center;
+    padding-top: 50px;
+    height: 100px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.account a:not(:first-child) {
+    font-size: 25px;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    border: 2px solid;
+    padding: 10px 85px;
+    border-color:rgb(204,204,51) ;
+    background-color:rgb(255,255,204);
+}
+
+
+.up-right-bar {
+    display: block;
+}
+
+.bottom-right-bar {
+    display: block;
+    margin-top: 20px;
+
+}
+
+.bottom-right-bar h2 {
+    background-color: rgb(238,238,238);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.business {
+    display: block;
+    word-spacing: 2px;
+    
+}
+
+.auction {
+    display: block;
+    word-spacing: 2px;
+}
+
+.sub-business-img {
+    display: inline-block;
+    width: 10%;
+    vertical-align: top;
+    margin-top: 20px;
+}
+
+.sub-auction-img {
+    display: inline-block;
+    width: 10%;
+    vertical-align: top;
+    margin-top: 20px;
+}
+
+.sub-business-text {
+    display: inline-block;
+    width: 75%;
+}
+.sub-auction-text {
+    display: inline-block;
+    width: 75%;
+}
+
+.sub-business-text a:first-child {
+    font-size: 20px;
+}
+.sub-auction-text a:first-child {
+    font-size: 20px;
+}
+
+.footer ul {
+    margin-left: 45px;
+}
+.footer ul li  {
+    display: inline-block;
+    list-style: none;
+    margin-left: 10px;
+}
+
+.footer ul li:not(:first-child) {
+    border-left: 1px solid;
+    padding-left: 15px;
+}
+
+.sub-footer {
+    text-align: center;
+}
+
+.img-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+.img-footer img {
+    margin-left: 20px;
+   
+}
