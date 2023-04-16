@@ -1,4 +1,4 @@
 import React from 'react';
 
 
-var nodemailer = requar
+var nodemailer = require("nodemailer");
