@@ -2,10 +2,15 @@
 body{
     font-family: Tahoma ;
 }
+
+
+   
+
 .nav-bar {
     background-color: rgb(59,89,152);
     color: white;
     height: 60px;
+    display: flexbox;
 }
 
 .nav-bar-right button {
