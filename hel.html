@@ -795,7 +795,7 @@
  <div class="tab-space"></div> 
  <div class="tab-text-container"> <div class="tab-description"> <div class="desc-title"> <p class="">Links</p> 
 </div> 
-  <input type="url" name="text" id="text" placeholder="enter links" style="background-color: #c8ecee;">  <button  class="desc-title" id="addlinks" onclick="myFunction()" type="submit">Add links</button>  
+  <input type="url" name="text" id="text" placeholder="enter links" style="background-color: #c8ecee;">  <button  class="desc-title" id="addlinks" onclick="myFunction()" type="submit" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Add links</button>  
  <p></p> 
  <ul class="rteBlock defaultList" id="linksler" ></ul> 
  <p></p> 
@@ -805,31 +805,38 @@
 </div> 
 
 <script>
-
+var text= document.getElementById("text");
 
 function myFunction(){
-        var li = document.createElement("li");
-   
-    var text= document.getElementById("text").value;
-    var linkAdd = document.createElement("a");
-    linkAdd.setAttribute('href',   text);
-   var linktext= document.createTextNode(text);
-   
-  
-  linkAdd.appendChild(linktext);
-
-  
-  if (text === '') {
+    var text= document.getElementById("text");
+  if (text.value === '') {
     alert("You must write something!");
   } else {
-    document.getElementById("linksler").appendChild(li).appendChild(linkAdd);
+    var li = document.createElement("li");
+   var linkList=document.getElementById("linksler");
+    var text= document.getElementById("text");
+    var linkAdd = document.createElement("a");
+    linkAdd.setAttribute('href', "https://" +  text.value);
+   var linktext= document.createTextNode(text.value);
+   
+   //linkAdd.innerHTML= text.value;
+  linkAdd.appendChild(linktext);
+
+  li.appendChild(linkAdd);
+  linkList.appendChild(li);
+ 
     
   }
   document.getElementById("text").value = "";
 
 
   
+
+
+  
 }
+localStorage.setItem("links",text.value)
+ document.getElementById("linksler").innerHTML=localStorage.getItem("links");
 
 </script>
 
