@@ -25,6 +25,10 @@ setTimeout(() => {
 }
 
 
+let searchValue= document.getElementById("search").value;
+
+let dataTable=[];
+
 
 
 
