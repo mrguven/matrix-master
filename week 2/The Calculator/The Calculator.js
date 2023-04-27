@@ -1,47 +1,47 @@
 
 
 
-let one= document.getElementById("one").value;
-let two= document.getElementById("two").value;
-let three= document.getElementById("three").value;
-let four= document.getElementById("four").value;
-let five= document.getElementById("five").value;
-let six= document.getElementById("six").value;
-let seven= document.getElementById("seven").value;
-let eight= document.getElementById("eight").value;
-let nine= document.getElementById("nine").value;
-let plus= document.getElementById("plus").value;
-let min= document.getElementById("min").value;
-let ac= document.getElementById("ac").value;
-let multiple= document.getElementById("multiple").value;
-let divide= document.getElementById("divide").value;
-let point= document.getElementById("point").value;
-let del= document.getElementById("del").value;
-let equal= document.getElementById("=").value;
+let one= document.getElementById("one");
+let two= document.getElementById("two");
+let three= document.getElementById("three");
+let four= document.getElementById("four");
+let five= document.getElementById("five");
+let six= document.getElementById("six");
+let seven= document.getElementById("seven");
+let eight= document.getElementById("eight");
+let nine= document.getElementById("nine");
+let plus= document.getElementById("plus");
+let min= document.getElementById("min");
+let ac= document.getElementById("ac");
+let multiple= document.getElementById("multiple");
+let divide= document.getElementById("divide");
+let point= document.getElementById("point");
+let del= document.getElementById("del");
+let equal= document.getElementById("=");
 
 
 let result = document.getElementById('result');
-//let buttonsValue= document.getElementById('one');
+result.innerHTML=0;
+ 
 
- let klas= document.getElementsByClassName("buttons");
 
+
+
+
+
+function myFunction(number1) {
+    console.log('hello world')
+    
+    result.innerHTML=0;
+
+    
+
+
+    result.innerHTML=eight.value;
 
  
 
-for (let i=0;i<klas.length;i++) {
 
-    klas[i].addEventListener("click",myFunction);
-    
-}
-
-function myFunction() {
-    console.log('hello world')
-    let result = document.getElementById('result');
-
-   console.log(klas.value);
- // parseFloat(result) = parseFloat(buttonsValue)
-
-result.value=buttonsValue.value;
 
 }
 
