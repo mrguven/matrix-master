@@ -65,6 +65,7 @@ OriginCountry:"Canada\
 document.getElementById('searchButton').addEventListener('click',searchFunction);
 
 
+
 function searchFunction() {
   console.log('it works');
   console.log(searchValue.value);
