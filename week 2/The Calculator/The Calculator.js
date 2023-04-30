@@ -25,58 +25,72 @@ result.innerHTML=0;
  
 
 
+let currentNumber="";
 
-
-currentNumber=0;
+let total=0;
 
 function myFunction(value) {
     
     
-    currentNumber=0;
+    
 
     
 
 
-    if(value) {
-        currentNumber+=value;
-        console.log(currentNumber);
+    
        
-        console.log(typeof(value));
-
-    }
-
-    if(value==='+') {
-
-    }
-
-    if(value==='-') {
+      //  console.log(currentNumber);
+       
         
+
+
+
+
+
+
+
+
+
+    
+
+    if((value== "+" || value== '-' || value=='*' || value=='/') && currentNumber=="") {
+  console.log("enter a number");
+
+
+
     }
 
-    if(value==='*') {
+    // if(value=='-' && currentNumber==") {
+    //     console.log("enter a number");
         
-    }
+    // }
 
-    if(value==='/') {
+    // if(value=='*' && currentNumber=="") {
+    //     console.log("enter a number");
         
-    }
+    // }
 
-    if(value==='.') {
+    // if(value=='/' && currentNumber=="") {
+    //     console.log("enter a number");
         
-    }
+    // }
 
-    if(value==='=') {
-        
-    }
+    // if(value=='.' && currentNumber=="") {
+    //     console.log("enter a number");
+    // }
 
-    if(value==='del') {
-        
-    }
+    // if(value=='=' && currentNumber=="") {
+    //     console.log("enter a number");
+    // }
+
+    // if(value==='del' && currentNumber=="") {
+    //     console.log("enter a number");
+    // }
+
+   // currentNumber+=value;
 
 
-
-
-    result.innerHTML=value;
+    result.innerHTML=currentNumber;
 
 
 

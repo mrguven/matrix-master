@@ -25,6 +25,42 @@ setTimeout(() => {
 }
 
 
+
+
+
+var  reclame=["download (1).jpg","download.jpg","evergreen-ap-rc-220315_1647347924564_hpMain_16x9_1600.jpg",
+"hmm-algeciras_0.jpg","images.jpg","resized-amogy-cargo-ship-maria.jpg"]
+
+
+document.getElementById("ads").addEventListener("click", loadFunction);
+
+let imgList= document.getElementById("imgList");
+
+
+
+
+var  i=0;
+function loadFunction () {
+   
+
+
+    imgList.style.width="70%";
+        
+    
+
+imgList.src =reclame[i];
+
+i+=1;
+i<reclame.length 
+
+if(i==reclame.length) {
+  i=0;
+}
+ 
+}
+
+
+/*  try to search in the array object, but failed. It should be more studied.
 let searchValue= document.getElementById("search");
 
 let searchList=[];  
@@ -64,23 +100,11 @@ OriginCountry:"Canada\
 
 document.getElementById('searchButton').addEventListener('click',searchFunction);
 
-
-
 function searchFunction() {
-  console.log('it works');
+  
   console.log(searchValue.value);
  
   for(let i=0;i<dataTable.length;i++) {
-
-      if ((dataTable[i].Name|| dataTable[i].Departure|| dataTable[i].Arrival||
-        dataTable[i].Time|| dataTable[i].Contact||  dataTable[i].OriginCountry )!==searchValue.value) {
-document.getElementById('searchMessage').innerHTML= "noting found";
-      }
-
-      if ((dataTable[i].Name|| dataTable[i].Departure|| dataTable[i].Arrival||
-        dataTable[i].Time|| dataTable[i].Contact||  dataTable[i].OriginCountry )===searchValue.value) {
-          document.getElementById('searchMessage').innerHTML= searchValue.value;
-        }
 
   }
 
@@ -91,39 +115,43 @@ document.getElementById('searchMessage').innerHTML= "noting found";
 }
 
 
+*/
+
+
+/*
+
+      if (dataTable[i].Name!==searchValue.value && dataTable[i].Departure!==searchValue.value && 
+        dataTable[i].Arrival!==searchValue.value &&
+        dataTable[i].Time!==searchValue.value && dataTable[i].Contact!==searchValue.value && 
+         dataTable[i].OriginCountry!==searchValue.value ) {
+document.getElementById('searchMessage').innerHTML= "noting found";
+console.log('not found');}
+
+      if (dataTable[i].Name ==searchValue.value|| dataTable[i].Departure ==searchValue.value|| dataTable[i].Arrival ==searchValue.value||
+        dataTable[i].Time ==searchValue.value|| dataTable[i].Contact==searchValue.value||  dataTable[i].OriginCountry==searchValue.value ) {
+          document.getElementById('searchMessage').innerHTML= searchValue.value;
+        console.log('found');}
+
+
+if (dataTable[i].find(e => e.Departure == searchValue.value)) {
+  console.log('found');
+
+}
+
+else {
+  console.log('not found');
+}
+
+*/
 
 
 
 
 
-//t is planned to make a slide, but failed
-
-// let reclame=["download (1).jpg","download.jpg","evergreen-ap-rc-220315_1647347924564_hpMain_16x9_1600.jpg",
-// "hmm-algeciras_0.jpg","images.jpg","resized-amogy-cargo-ship-maria.jpg"]
-
-
-// document.getElementById("ads").addEventListener("click", loadFunction);
-
-// let img= document.getElementById("imgList");
-
-
-// function loadFunction () {
-   
-//     img.style.width="70%";
-        
-    
-
-
- 
-//     img.src =reclame[i];
-   
 
 
 
-    
-    
 
-    
-// }
+
 
 
