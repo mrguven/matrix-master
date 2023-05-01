@@ -28,7 +28,8 @@ for(let i=1;i<136;i++) {
 
 // create a variable
 // use for loop to reach aimed number
-// increase number each time till value of i 
+// increase number each time as much as value of i
+//and sum number with value of i
 //equalize it again number
 
 
