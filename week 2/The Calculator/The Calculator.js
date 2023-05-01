@@ -115,3 +115,5 @@ if(operator=='/') {
 }
 
     }
+
+    result.innerHTML='';
