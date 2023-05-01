@@ -31,12 +31,9 @@ result.innerHTML=currentNumber;
 
     }
     
-
+    var firstNumber="";
+    var secNumber="";
     function myOperation(op) {
-
-        var firstNumber="";
-        var secNumber="";
-
         if(op=='+' && currentNumber) {
             console.log(currentNumber);
             currentNumber=firstNumber;
