@@ -4,7 +4,8 @@ let result = document.getElementById('result');
 result.innerHTML="";
  
 let currentNumber="";
-
+var firstNumber="";
+var secNumber="";
 let total=0;
 
 function myFunction(value) {    
@@ -31,8 +32,7 @@ result.innerHTML=currentNumber;
 
     }
     
-    var firstNumber="";
-    var secNumber="";
+  
     function myOperation(op) {
         if(op=='+' && currentNumber) {
             console.log(currentNumber);
