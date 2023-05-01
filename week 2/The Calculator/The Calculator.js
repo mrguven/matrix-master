@@ -1,6 +1,7 @@
 
 
 let result = document.getElementById('result');
+let lastResult= document.getElementById('lastResult')
 result.innerHTML="";
  
 let currentNumber="";
@@ -20,35 +21,46 @@ function myFunction(value) {
     
 };
 
+let operator ='';
 function myOperation(op) {
-    if(op=='+' && currentNumber) {
-        console.log(currentNumber);
-        firstNumber=currentNumber;
-        currentNumber="";
-        result.innerHTML=currentNumber;
 
-       console.log(firstNumber);
-       parseFloat(firstNumber)+parseFloat(currentNumber);
-       
+    
+    if(op=='+' && currentNumber) {
         
+        firstNumber=currentNumber;
+        
+        operator='+';
+        
+        result.innerHTML='';
+        currentNumber='';
     }
 
     if(op=='-' && currentNumber) {
-            console.log("enter a number");
-            
-        }
+        firstNumber=currentNumber;
+        operator='-';
+        
+        result.innerHTML='';
+        currentNumber='';
+  }
     
-        if(op=='*' && currentNumber) {
-            console.log("enter a number");
-            
-        }
+    if(op=='*' && currentNumber) {
+            firstNumber=currentNumber;
+            operator='*';
+        
+            result.innerHTML='';
+            currentNumber='';
+
+   }
     
-        if(op=='/' && currentNumber) {
-            console.log("enter a number");
+    if(op=='/' && currentNumber) {
+            firstNumber=currentNumber;
+            operator='/';
+        
+            result.innerHTML='';
+            currentNumber='';
+    
             
         }
-
-
 }
 
 function clearScreen() {
@@ -63,10 +75,43 @@ result.innerHTML=currentNumber;
         
     }
   
+function equalButton (){
+
+secNumber=currentNumber;
+
+if (operator=='+') {
+
    
+ console.log( parseFloat(firstNumber) + parseFloat(secNumber) );
+result.innerHTML=parseFloat(firstNumber) + parseFloat(secNumber)
+ currentNumber="";
+ firstNumber="";
+ secNumber="";
 
-    function equalButton (){
+}
 
-        result.innerHTML=
+if(operator=='-') {
+   
+    result.innerHTML=parseFloat(firstNumber) - parseFloat(secNumber);
+    currentNumber="";
+ firstNumber="";
+ secNumber="";
+}
+
+if(operator=='*') {
+   
+    result.innerHTML=parseFloat(firstNumber) * parseFloat(secNumber);
+    currentNumber="";
+ firstNumber="";
+ secNumber="";
+}
+
+if(operator=='/') {
+   
+    result.innerHTML= parseFloat(firstNumber) / parseFloat(secNumber);
+    currentNumber="";
+ firstNumber="";
+ secNumber="";
+}
 
     }
