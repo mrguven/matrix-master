@@ -42,11 +42,10 @@ for(let i=0;i<136;i++) {
 
 //  4. Print the elements of an array
 
-
-
  //create a array, 
     //and use for loop and it is length equal array`s element.
     //run on screen element`s of array
+
 let x = [1,4,2,12];
 
 for (let i =0;i<x.length;i++) {  
@@ -84,9 +83,11 @@ for(let i=0;i<findMaxArray.length;i++) {
 //6. Get Average
 
 
-//create a  variable with 0 value, this is total of elements in array
+//create a  variable with 0 value, 
 //use for loop to sum all elements of array and equalize totalaverage
-// totalaverage divide number length of array
+//later this value equalize  total of elements in array
+// totalaverage divided number length of array
+
 
 
 
