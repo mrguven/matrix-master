@@ -13,6 +13,9 @@ function myFunction(value) {
       //  console.log(currentNumber);
        currentNumber+=value
    result.innerHTML+=value;
+
+   
+
     return currentNumber;
 };
 
@@ -28,9 +31,7 @@ result.innerHTML=currentNumber;
         
     }
 
-    function equalButton (){
-
-    }
+   
     
   
     function myOperation(op) {
@@ -56,5 +57,9 @@ result.innerHTML=currentNumber;
                 
             }
 
+
+    }
+
+    function equalButton (){
 
     }
