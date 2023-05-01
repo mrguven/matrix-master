@@ -21,7 +21,7 @@
 
 
 let result = document.getElementById('result');
-result.innerHTML=0;
+result.innerHTML="";
  
 
 
@@ -29,36 +29,18 @@ let currentNumber="";
 
 let total=0;
 
-function myFunction(value) {
-    
-    
-    
-
-    
-
-
-    
+function myFunction(value) {    
        
       //  console.log(currentNumber);
        
-        
 
+currentNumber+=value
 
+   
 
-
-
-
-
-
-
+    result.innerHTML+=value;
     
 
-    if((value== "+" || value== '-' || value=='*' || value=='/') && currentNumber=="") {
-  console.log("enter a number");
-
-
-
-    }
 
     // if(value=='-' && currentNumber==") {
     //     console.log("enter a number");
@@ -89,17 +71,23 @@ function myFunction(value) {
 
    // currentNumber+=value;
 
+return result;
+    
+};
 
-    result.innerHTML=currentNumber;
-
-
-
+function clearScreen() {
+    document.getElementById("result").innerHTML = "";
+    };
 
     
+    function deleteLastChar() {
+console.log(currentNumber);
+currentNumber= currentNumber.substring(0,currentNumber.length-1);
+result.innerHTML=currentNumber;
+        
+    }
 
- 
-
-
-
-}
-
+    function equalButton (){
+        
+    }
+    

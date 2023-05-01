@@ -16,7 +16,7 @@
     background-color: rgb(228, 243, 243);
 }
 
-.buttons {
+.btn btn-outline-primary{
     width: 10%;
     height: 40px;
     padding: 1%;
