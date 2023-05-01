@@ -38,40 +38,13 @@ currentNumber+=value
 
    
 
-    result.innerHTML+=value;
+   result.innerHTML+=value;
+    
+ 
     
 
+    return currentNumber;
 
-    // if(value=='-' && currentNumber==") {
-    //     console.log("enter a number");
-        
-    // }
-
-    // if(value=='*' && currentNumber=="") {
-    //     console.log("enter a number");
-        
-    // }
-
-    // if(value=='/' && currentNumber=="") {
-    //     console.log("enter a number");
-        
-    // }
-
-    // if(value=='.' && currentNumber=="") {
-    //     console.log("enter a number");
-    // }
-
-    // if(value=='=' && currentNumber=="") {
-    //     console.log("enter a number");
-    // }
-
-    // if(value==='del' && currentNumber=="") {
-    //     console.log("enter a number");
-    // }
-
-   // currentNumber+=value;
-
-return result;
     
 };
 
@@ -88,6 +61,36 @@ result.innerHTML=currentNumber;
     }
 
     function equalButton (){
-        
+
     }
     
+
+    function myOperation(op) {
+
+        var firstNumber="";
+        var secNumber="";
+        
+        if(op=='+' && currentNumber) {
+            console.log(currentNumber);
+            currentNumber=firstNumber;
+           console.log(firstNumber);
+            
+        }
+
+        if(op=='-' && currentNumber) {
+                console.log("enter a number");
+                
+            }
+        
+            if(op=='*' && currentNumber) {
+                console.log("enter a number");
+                
+            }
+        
+            if(op=='/' && currentNumber) {
+                console.log("enter a number");
+                
+            }
+
+
+    }
