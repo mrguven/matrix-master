@@ -1,13 +1,13 @@
 
 
 let result = document.getElementById('result');
-let lastResult= document.getElementById('lastResult')
+
 result.innerHTML="";
  
 let currentNumber="";
 let firstNumber="";
 let secNumber="";
-let total=0;
+
 
 function myFunction(value) {    
        
