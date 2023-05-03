@@ -77,6 +77,8 @@ console.log(FizzBuzzFunction(135));
 
 //4. Fibonacci
 
+
+
 //0 1 1 2 3 5 8 13 21.
 
 
@@ -89,6 +91,8 @@ function  Fibonacci(fib) {
 
 for (let i=0;i<fib;i++) {
 
+    total = firstNumber+secNumber;
+    firstNumber=total
 
 
 
