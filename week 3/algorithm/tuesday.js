@@ -64,7 +64,7 @@ for(let i=1;i<num;i++) {
     if((fizzBuzz[i-1]%5==0) && (fizzBuzz[i-1]%3==0)) {
         fizzBuzz[i-1]="FizzBuzz";
     }
-    if (fizzBuzz[i-1]%3==0) {
+    else if (fizzBuzz[i-1]%3==0) {
         fizzBuzz[i-1]="Fizz";
     }
     if(fizzBuzz[i-1]%5==0 ) {
@@ -89,7 +89,7 @@ function  Fibonacci(fib) {
 
 for (let i=0;i<fib;i++) {
 
-    
+
 
 
 }
