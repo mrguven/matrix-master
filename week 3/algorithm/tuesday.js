@@ -45,6 +45,16 @@ console.log(shiftedArray);
 
 //3. FizzBuzz
 
+//create a function that take arguments
+//create an empty array
+//use for loop that reach arg`s value
+// push each number to empty array
+// use if statement to check which elements dividible 15 or 3 or 5
+// and change that elements strigs that given in the question
+
+
+
+
 function FizzBuzzFunction(num) {
     let fizzBuzz=[];
 
@@ -75,6 +85,14 @@ function  Fibonacci(fib) {
     let firstNumber=0;
     let secNumber=1;
     let total=0;
+    let fibArray=[];
+
+for (let i=0;i<fib;i++) {
+
+    
+
+
+}
 
 
 
@@ -96,6 +114,11 @@ function  Fibonacci(fib) {
 //5. Remove the Negative
 
 
+// create an empty array
+// use for loop 
+//and check each elements of array that smaller than 0
+// elements that is bigger than 0, push empty array
+
 let removeTheNegative = [1,-2,4,1];
 
 let positiveArray=[];
@@ -112,7 +135,14 @@ console.log(positiveArray);
 
 //6. Communist Censorship
 
-
+//create a function that take two parameter, 
+// create an empty array
+// create a variable that is value is empty
+// use for loop that reach count of array elements
+//use if conditions
+// if searching word and elements of array is equal, if statement is active
+//use for loop to add star as much as length of searching word
+//these words is pushed to empty array
 
 let communistCensorship =['Man', 'I','Love','The','Matrix','Program'];
 
@@ -139,3 +169,11 @@ console.log(Censorship(communistCensorship,"Matrix"));
 
 
 //Tuesday: Find the longest Word in a String
+
+let longestWord ="The quick brown fox jumped over the lazy dog";
+
+
+function findLongestWord() {
+
+
+}

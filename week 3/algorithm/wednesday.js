@@ -33,3 +33,9 @@ function Factorialize2(num) {
 
 
 console.log(Factorialize2(5));
+
+
+
+//Wednesday : Title Case a Sentence
+
+
