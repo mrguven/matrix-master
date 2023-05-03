@@ -144,3 +144,31 @@ for(let i=0;i<numberToString.length;i++) {
     }
 }
 console.log(numberToString);
+
+
+
+
+//Monday: Largest Number in Arrays
+
+let maxArray=[];
+let maximumNumber=0;
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+function largestOfFour(largestOfFour) {
+    
+    for(let i=0;i<largestOfFour.length;i++) {
+        maximumNumber=0;
+        for(let j=0;j<4;j++) {
+            if(largestOfFour[i][j] > maximumNumber) {
+                maximumNumber=largestOfFour[i][j] ;
+                        
+            }
+        }
+        console.log(maximumNumber);
+        maxArray.push(maximumNumber);
+    }
+    return maxArray;
+  }
+
+console.log(maxArray);
