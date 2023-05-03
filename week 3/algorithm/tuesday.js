@@ -45,25 +45,50 @@ console.log(shiftedArray);
 
 //3. FizzBuzz
 
-let fizzBuzz=[];
+function FizzBuzzFunction(num) {
+    let fizzBuzz=[];
 
-for(let i=1;i<135;i++) {
+for(let i=1;i<num;i++) {
     fizzBuzz.push(i);
 
+    if((fizzBuzz[i-1]%5==0) && (fizzBuzz[i-1]%3==0)) {
+        fizzBuzz[i-1]="FizzBuzz";
+    }
     if (fizzBuzz[i-1]%3==0) {
-        fizzBuzz[i]="Fizz";
+        fizzBuzz[i-1]="Fizz";
     }
-    if(fizzBuzz[i-1]%5==0) {
-        fizzBuzz[i]="Buzz";
+    if(fizzBuzz[i-1]%5==0 ) {
+        fizzBuzz[i-1]="Buzz";
     }
-
 }
-
-console.log(fizzBuzz);
+return fizzBuzz;
+}
+console.log(FizzBuzzFunction(135));
 
 //4. Fibonacci
 
+//0 1 1 2 3 5 8 13 21.
 
+
+function  Fibonacci(fib) {
+
+    let firstNumber=0;
+    let secNumber=1;
+    let total=0;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+// }
 
 
 
@@ -71,8 +96,46 @@ console.log(fizzBuzz);
 //5. Remove the Negative
 
 
+let removeTheNegative = [1,-2,4,1];
 
+let positiveArray=[];
 
+for(let i=0;i<removeTheNegative.length;i++) {
+    if(removeTheNegative[i]>0) {
+        positiveArray.push(removeTheNegative[i])
+        
+    }
+}
+
+console.log(positiveArray);
 
 
 //6. Communist Censorship
+
+
+
+let communistCensorship =['Man', 'I','Love','The','Matrix','Program'];
+
+function Censorship(arr, target) {
+    let newArray = [];
+    let star = "";
+    for(let i=0; i<arr.length; i++) {
+        if(target === arr[i]){
+            for(let j=0; j<target.length; j++){
+                star += "*"
+            }
+            newArray.push(star)
+        } else {
+            newArray.push(arr[i])
+        }
+    }
+    return newArray;
+}
+
+console.log(Censorship(communistCensorship,"Matrix"));
+
+
+
+
+
+//Tuesday: Find the longest Word in a String
