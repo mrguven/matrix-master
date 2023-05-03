@@ -3,6 +3,9 @@
 //create variable with 0 value
 // check varible <0
 //else varible >0
+//use while loop
+// minimize the number and multiply each number
+//equal to result
 
 // n=(n-1)(n-2)(n-3)(n-4)....(n-n)
 
