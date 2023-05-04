@@ -89,9 +89,9 @@ console.log(FizzBuzzFunction(135));
 //crate empty value
 //use for loop to reach till higheset number 
 // we begin 0, thus we push 0 to empty array
-//and total equal firstNumber+secNumber
-// and then firstNumber equal to secNumner
-//and then secNumber equal total
+//and total equalize firstNumber+secNumber
+// and then firstNumber equalize to secNumner
+//and then secNumber equalize total
 //return fibArray
 
 

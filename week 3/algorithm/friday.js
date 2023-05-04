@@ -63,7 +63,17 @@ console.log(findNumber(highestNumber));
 //Friday: Fibonacci Sequence
 
 
-
+// create a function 
+//create variable as firstNumber and its value=0
+//Create second variable as SecNumber and its value=1
+//create  variable as name total and its value 0
+//crate empty value
+//use for loop to reach till higheset number 
+// we begin 0, thus we push 0 to empty array
+//and total equalize firstNumber+secNumber
+// and then firstNumber equalize to secNumner
+//and then secNumber equalize total
+//return fibArray
 
 
 
