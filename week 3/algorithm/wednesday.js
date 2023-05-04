@@ -41,5 +41,28 @@ console.log(Factorialize2(5));
 
 //Wednesday : Title Case a Sentence
 
+//create a function that can get arguments
+// create an empty array
+//given string  is converted to array and we can read each word.
+//use for loop to reach each word and with charAt and toUpperCase method first letter of element of array make uppercase
+//use join method in order to concert from array to string
+//return variable
+
+
 
 let titleCase="I'm a little tea pot";
+
+function Wednesday(titleCase) {
+let titleString=[];
+titleString= titleCase.split(' ');
+console.log(titleString);
+for(let i=0;i<titleString.length;i++) {
+
+    titleString[i] = titleString[i].charAt(0).toUpperCase() + titleString[i].slice(1);
+
+}
+titleCase= titleString.join(' ');
+return titleCase;
+}
+
+console.log(Wednesday(titleCase));
