@@ -66,3 +66,12 @@ return titleCase;
 }
 
 console.log(Wednesday(titleCase));
+
+
+
+//Wednesday: Power N
+
+
+
+
+

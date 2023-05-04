@@ -9,42 +9,21 @@ function findNumber (highestNumber) {
         let firNumber=0;
         let secNumber=0;
         let thirdNumber=0;
-
-        for( let i=0;i<highestNumber.length;i++) {
-
-            if(highestNumber[i] >firNumber) {
-                
-                 thirdNumber=secNumber;
-                 secNumber=firNumber;
-                 firNumber=highestNumber[i];
-                
-                
-                    
-                }
-
-                if (highestNumber[i]>secNumber ) {
-                    
-                    thirdNumber=secNumber;
-                    secNumber=highestNumber[i];
-                    
-                    
-                    
-                }
-                if (highestNumber[i]>thirdNumber ) {
-
-                    thirdNumber=highestNumber[i]; 
-
-                   
-                }
-                
-                
-            }
-
-           
-
-             console.log(thirdNumber);
+        let newArray=[];
 
 
+    for(let i=0;i<highestNumber.length;i++) {
+
+        if(highestNumber[i]>firNumber) {
+
+        }
+
+
+
+    }
+
+
+        
 }
 
 findNumber(highestNumber);
@@ -57,3 +36,27 @@ findNumber(highestNumber);
 
 
 //Friday: Fibonacci Sequence
+
+
+
+function  Fibonacci(fib) {
+
+    let firstNumber=0;
+    let secNumber=1;
+    let total=0;
+    let fibArray=[];
+    
+
+for (let i=0;i<fib;i++) {
+        fibArray.push(firstNumber);
+    total = firstNumber+secNumber;
+    firstNumber=secNumber;
+    secNumber=total;
+    
+
+
+}
+return fibArray;
+}
+
+console.log(Fibonacci(43));
