@@ -42,3 +42,4 @@ console.log(Factorialize2(5));
 //Wednesday : Title Case a Sentence
 
 
+let titleCase="I'm a little tea pot";

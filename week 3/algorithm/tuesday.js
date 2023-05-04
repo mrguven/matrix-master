@@ -82,27 +82,41 @@ console.log(FizzBuzzFunction(135));
 //0 1 1 2 3 5 8 13 21.
 
 
+// create a function 
+//create variable as firstNumber and its value=0
+//Create second variable as SecNumber and its value=1
+//create  variable as name total and its value 0
+//crate empty value
+//use for loop to reach till higheset number 
+// we begin 0, thus we push 0 to empty array
+//and total equal firstNumber+secNumber
+// and then firstNumber equal to secNumner
+//and then secNumber equal total
+//return fibArray
+
+
+
 function  Fibonacci(fib) {
 
     let firstNumber=0;
     let secNumber=1;
     let total=0;
     let fibArray=[];
+    
 
 for (let i=0;i<fib;i++) {
-
+        fibArray.push(firstNumber);
     total = firstNumber+secNumber;
-    firstNumber=total
-
-
-
-}
-
+    firstNumber=secNumber;
+    secNumber=total;
+    
 
 
 }
+return fibArray;
+}
 
-
+console.log(Fibonacci(13));
 
 
 
