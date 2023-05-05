@@ -98,3 +98,9 @@ return fibArray[fib-1]; // we use min (-1) because we have zero in the array. th
 }
 
 console.log(Fibonacci(43));
+
+
+
+
+
+//Friday: r Triangle

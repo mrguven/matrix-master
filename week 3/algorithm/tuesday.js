@@ -20,6 +20,11 @@ for(let i=201;i<2701;i++) {
 console.log(divisibleArray);
 
 
+// i  |200 |201 |202 |203| 204
+// %3 |- |- |- |0
+// %5 |0 |- |- |- 
+// %15|  |  |  |
+
 
 
 //2. Shift the Values
@@ -40,6 +45,13 @@ for(let i=shiftArray.length-1;i>=0;i--) {
     shiftedArray.push(shiftArray[i])
 }
 console.log(shiftedArray);
+
+
+
+// shiftArray   | 2|1 |6 |4 |-7
+// shiftedArray | -7|4 |6 |1 |2
+// i            |4 |3 |2 |1 |0
+
 
 
 
@@ -74,6 +86,17 @@ for(let i=1;i<num;i++) {
 return fizzBuzz;
 }
 console.log(FizzBuzzFunction(135));
+
+
+
+// i   | 1| 2| 3| 4| 5    |15
+// %3%5| -| -| -| -| - --- FizzBuzz
+// %5  | -| -| -| -|Buzz
+// %3  | -| -|  |Fizz| -|
+
+
+
+
 
 //4. Fibonacci
 

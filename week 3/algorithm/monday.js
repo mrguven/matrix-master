@@ -10,6 +10,8 @@ for(let i=1;i<136;i++) {
 }
 
 
+//i  |0|1|2|3|4|5|6|7|8|...
+
 // 2. Print Odd Numbers 1 - 135
 
 //create for loop
@@ -22,6 +24,11 @@ for(let i=1;i<136;i++) {
     console.log(i);
     }
 }
+
+
+// i           |1|2|3|4|5|6|7|8...
+// %2          |1|0|3|0|5|0|7|0....
+// console.log |1|3|5|7|....
 
 
 //3. Sum of Printed Numbers
@@ -41,6 +48,10 @@ for(let i=0;i<136;i++) {
     }
 
 
+    // i           | 1|2 |3 |4 |5 |6 |7 |8 |9
+    // sum         |1 |3 |6 |10 |15 |21 |28 |36 |45 
+
+
 //  4. Print the elements of an array
 
  //create a array, 
@@ -53,6 +64,10 @@ for (let i =0;i<x.length;i++) {
    
     console.log(x[i]);
 }
+
+
+// i |0 |1 |2 |3
+// x |1 |4 |2 |12
 
 
 
@@ -81,6 +96,11 @@ for(let i=0;i<findMaxArray.length;i++) {
 
 
 
+// findMaxArray  | 2|-3 |-1|4
+// i             |0 |1 |2 |3
+// maxNumber     |2 |2 |2 |4
+
+
 //6. Get Average
 
 
@@ -104,6 +124,15 @@ for( let i=0;i<avargeArray.length;i++) {
 console.log(totalAverage/avargeArray.length);
 
 
+
+
+// avargeArray  |4 |5 |1 |3 |6
+// i            |0 |1 |2 |3 |4
+// totalAverage |6
+
+
+
+
 //7. Eliminate the Negatives
 
 //create an array
@@ -123,6 +152,13 @@ for(let i=0;i<eliminate.length;i++) {
     }
 }
 console.log(eliminate);
+
+
+// eliminate       |2 |-1 |4 |-3
+// eliminate[i]    |2 |0 |4 |0
+// i               |0 |1 |2 |3
+// console.log     |2 |0 |4 |0
+
 
 
 //8. Number to String
@@ -145,6 +181,12 @@ for(let i=0;i<numberToString.length;i++) {
 }
 console.log(numberToString);
 
+
+
+// numberToString          |2 |-1 |4 |-3
+// numberToString [i]      |2 |"Turing"|4 |"Turing"   
+// i                       |0 |1       |2 |3
+// console.log             |2 |"Turing"|4 |"Turing"
 
 
 
