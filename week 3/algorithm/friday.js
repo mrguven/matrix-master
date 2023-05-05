@@ -13,6 +13,8 @@
 // in first if statement we find firNumber(highest number in array)
 //in the second if statement we find mid number
 // in de third if statement we find 3rd highest number
+//in the each if statement each variable take others previous value. for example third get value of secondNumber
+// second number get first number of value.
 
 
 let highestNumber= [5, 2, 8, 20, -2, 0, 11, 7, 3, 9, 31];
@@ -22,13 +24,8 @@ function findNumber (highestNumber) {
         let firNumber=0;
         let secNumber=0;
         let thirdNumber=0;
-       
-
-
-    for(let i=0;i<highestNumber.length;i++) {
-        
-
-        if(highestNumber[i]>firNumber) {
+     for(let i=0;i<highestNumber.length;i++) {
+    if(highestNumber[i]>firNumber) {
             thirdNumber=secNumber;
             secNumber=firNumber;
                 firNumber=highestNumber[i];      
@@ -54,6 +51,11 @@ return thirdNumber;
 console.log(findNumber(highestNumber));
 
 
+// i                  0|1|2|.|7|
+// highestNumber[i]   5|2|8|.|11|
+// firNumber          5|5|8|.|20|
+// secNumber          0|2|5|.|8|
+// thirdNumber        0|0|2|.|5|
 
 
 
@@ -98,6 +100,18 @@ return fibArray[fib-1]; // we use min (-1) because we have zero in the array. th
 }
 
 console.log(Fibonacci(43));
+
+
+
+// i           |0 |1 |2 |3 |4|.|fib
+// fibArray    |0 |1 |1 |2 |3|.|.
+// firstNumber |0 |1 |2 |3 |5|.|.
+// secNumber   |1 |2 |3 |5 |8|.|.
+// total       |1 |2 |3 |5 |8|.|.
+
+
+
+
 
 
 
