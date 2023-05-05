@@ -11,7 +11,7 @@
 
 
 
-let str='covoR'
+let str='cov voc'
 
 
 function isPalindrome(str) {
@@ -35,6 +35,11 @@ return true;
 
 
 console.log(isPalindrome(str));
+
+
+
+
+
 
 
 //Thursday: Sum All Numbers in a Range
