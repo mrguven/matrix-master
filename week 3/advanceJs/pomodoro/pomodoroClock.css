@@ -36,7 +36,11 @@
 
 }
 
-
+.minSide h1 p {
+    display:inline-block;
+    grid-row: 20px;
+    
+}
 
 
 #result {

@@ -8,13 +8,17 @@ let buttondecMin= document.getElementById('minDecButton');
 let showBreak= document.getElementById('showBreak');
 let showMin= document.getElementById('showMin')
 
+let sec =document.getElementById('sec')
+
 let result = document.getElementById('result');
+
+
 
 result.innerHTML=25;
 
 let showBreakContent=showBreak.textContent;
 let showMinContent=showMin.textContent;
-
+let secContent=sec.textContent;
 
 console.log(showBreak.textContent);
 
@@ -85,14 +89,59 @@ function decMinValue (){
 
 }
 
+function runFunction () {setInterval(beginClock, 1000);}
+
+
+result.addEventListener('click',runFunction )
+
+
+
+function beginClock () {
+    
+
+    
+       
+        if(secContent!=0) {
+            console.log(secContent);
+            secContent=parseInt(secContent);
+            secContent=60;
+            secContent--; }
+
+           else if(secContent==0 && showMinContent!=0) {
+            secContent=59;
+                showMinContent--;
+            }
+            
+
+
+            if(secContent==0 && showMinContent==0) {
+                if(showBreakContent !=0) {
+                    showBreakContent--;
+                }
+            }
+
+
+        
+       
+        
+   
+    
+    
+    result.innerHTML=showMinContent +":" + secContent ;
+    
+   
 
 
 
 
+   
+
+    
+    
+}
 
 
-
-
+  
 
 
 
