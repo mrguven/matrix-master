@@ -1,0 +1,57 @@
+
+.border{
+    width: 60%;
+    display: flex;
+    margin-left: 27%;
+    margin-top: 5%;
+    
+}
+
+
+.breakSide {
+    width: 100%;
+    padding: 5%;
+}
+
+.breakSide button{
+    width: 20%;
+}
+
+.minSide {
+    
+        width: 100%;
+        padding: 5%;
+}
+
+.breakSide {
+    width: 100%;
+    padding: 5%;
+}
+
+.minSide button{
+    width: 20%;
+}
+.minSide h2 {
+    margin-right: 30px;
+
+}
+
+
+
+
+#result {
+    width: 30%;
+    height: 150px;
+    border: 2px slateblue double;
+    border-radius: 50%;
+    padding-left: 10%;
+    padding-top: 10%;
+    margin-top: 5%;
+}
+
+.resultScreen {
+    margin: 10%;
+    margin-left: 40%;
+  
+
+}

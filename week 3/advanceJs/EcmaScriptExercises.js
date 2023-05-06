@@ -141,15 +141,48 @@ console.log(objectValueSum(salaries));
 
 
 
-if (login == 'Employee') {
-  message = 'Hello';
-} else if (login == 'Director') {
-  message = 'Greetings';
-} else if (login == '') {
-  message = 'No login';
-} else {
-  message = '';
-}
+// if (login == 'Employee') {
+//   message = 'Hello';
+// } else if (login == 'Director') {
+//   message = 'Greetings';
+// } else if (login == '') {
+//   message = 'No login';
+// } else {
+//   message = '';
+// }
 
 
-let message= (login == 'Employee')?  message = 'Hello': (login == 'Director')? message = 'Greetings' : (login == '') ? message = 'No login' :  message = ''
+ let message= (login)=> (login == 'Employee')?  message = 'Hello': (login == 'Director')? message = 'Greetings' : (login == '') ? message = 'No login' :  message = '';
+
+console.log(message("Director"));
+
+
+
+/*assignment 2
+- you have string contain character and numbers "1,2,3,MM,a,t,r,i,x,_,_,M,a,s,t,e,r,5,2,0,7"
+- you have to get in the result just the string after remove the repeat char and num
+*/
+// 1- convert string to Array
+// 2- filter to get the characters
+// 3- check for the characters and special characters to remove special characters
+// 4- use reduce to concat
+// 5- replace _ with ''
+// 6- print the result
+
+
+// let text="1,2,3,MM,a,t,r,i,x,_,_,M,a,s,t,e,r,5,2,0,7";
+
+// let textArray= text.split('');
+// console.log(textArray);
+// let newArray= textArray.filter((a)=> a== RegExp("[a-z]"));
+// console.log(newArray);
+
+//--constructor function
+
+// function User (name,uername,salary) { {
+//   this.i=id;
+//   this.u=username;
+//   this.s=salary;
+// }
+
+// }

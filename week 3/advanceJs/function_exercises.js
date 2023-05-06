@@ -12,7 +12,7 @@
 //   }
 
 let age=19;
-  let newCheckAge= (age) => (age>18)?  true:  confirm('Do you have your parents permission to access this page?');
+  let newCheckAge= (age) => (age>18)?  true:  console.log('Do you have your parents permission to access this page?');
 
  console.log( newCheckAge(age));
 
