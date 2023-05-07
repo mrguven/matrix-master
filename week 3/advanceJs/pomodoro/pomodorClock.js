@@ -53,7 +53,7 @@ function increaseMinValue (){
     showMinContent=parseInt(showMinContent);
     showMinContent+=1;
     showMin.innerHTML= showMinContent;
-    result.innerHTML=showMinContent;
+    result.innerHTML=showMinContent+ ":" + "00";
 
 }
 
@@ -67,7 +67,7 @@ function decMinValue (){
         showMinContent=0
      }
     showMin.innerHTML= showMinContent;
-    result.innerHTML=showMinContent;
+    result.innerHTML=showMinContent+ ":" + "00";
 
 }
 let control=true; // to prevent run function for second time 
