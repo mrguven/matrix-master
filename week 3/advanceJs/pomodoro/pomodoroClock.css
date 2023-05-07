@@ -27,18 +27,22 @@
     width: 100%;
     padding: 5%;
 }
+.breakSide h1 {
+    display:inline-block;
+}
 
 .minSide button{
     width: 20%;
 }
 .minSide h2 {
     margin-right: 30px;
+    
 
 }
 
 .minSide h1 p {
     display:inline-block;
-    grid-row: 20px;
+    
     
 }
 
