@@ -12,16 +12,12 @@ let sec =document.getElementById('sec')
 let secBreak=document.getElementById('secBreak')
 let result = document.getElementById('result');
 
-
-
 result.innerHTML=25+ ":" + "00";
 
 let showBreakContent=showBreak.innerText;
 let showMinContent=showMin.innerText;
 let secContent=sec.innerText;
 let secBreakContent=secBreak.innerText;
-console.log(showBreak.innerText);
-
 
 
 buttonIncBreak.addEventListener('click', increaseBreakValue);
@@ -71,7 +67,7 @@ function decMinValue (){
 
 }
 let control=true; // to prevent run function for second time 
-let stopInternal; // to stop setInterval method
+ let stopInternal; // to stop setInterval method
 
  function runFunction() {
         if(control) {
@@ -122,10 +118,13 @@ function beginClock () {
 }
 
 showBreak.addEventListener('click', runBreak);
-
+let checkBreakInternal=true;
 let runBreakInterval;
 function runBreak() {
-    runBreakInterval = setInterval(startBreak,1000)
+if(checkBreakInternal==true) {
+    runBreakInterval = setInterval(startBreak,1000);
+    checkBreakInternal=false;
+}
 }
 
 
@@ -160,27 +159,57 @@ if(showBreakContent==0 && secBreakContent==0) {
 
 
 
-// buttonIncBreak.addEventListener('click', increaseValue(showBreakContent,showBreak))
+
+
+
+// buttonIncBreak.addEventListener('click', function () {increaseValue(showBreak,showBreak)})
+// buttonIncMin.addEventListener('click', function () {increaseValue(showMin,showMin)})
 
 
 // function increaseValue(input,place) { 
-//     if(!isNaN(input))  {
-//     console.log(input);
-//    input=parseInt(input);
+//     if(isNaN(input))  {
+   
+//    input=parseInt(input.innerText);
 //     input+=1;
 //     place.innerHTML= input;
+//     result.innerHTML=input+ ":" + "00";
+//     console.log(input);
 // }
     
 //     else   {
+//         input=parseInt(input.innerText);
 //         input+=1;
 //         place.innerHTML= input;
+//         result.innerHTML=input+ ":" + "00";
 //     }
 
    
 // }
 
 
+// buttonDecBreak.addEventListener('click', function () {decValue(showBreak,showBreak)})
+// buttondecMin.addEventListener('click', function () {decValue(showMin,showMin)})
 
+
+// function decValue(input,place) { 
+//     if(isNaN(input))  {
+   
+//    input=parseInt(input.innerText);
+//     input-=1;
+//     place.innerHTML= input;
+//     result.innerHTML=input+ ":" + "00";
+//     console.log(input);
+// }
+    
+//     else   {
+//         input=parseInt(input.innerText);
+//         input-=1;
+//         place.innerHTML= input;
+//         result.innerHTML=input+ ":" + "00";
+//     }
+
+   
+// }
 
 
 

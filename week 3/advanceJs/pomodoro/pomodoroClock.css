@@ -4,6 +4,7 @@
     display: flex;
     margin-left: 20%;
     margin-top: 5%;
+    background-color: bisque;
     
 }
 
@@ -18,8 +19,8 @@
 }
 
 .minSide {
-    
-        width: 100%;
+    display:inline-block;
+        width: 120%;
         padding: 5%;
 }
 
@@ -33,12 +34,20 @@
 
 .minSide button{
     width: 20%;
+    display:inline-block;
 }
 .minSide h2 {
+    width: 90%;
     margin-right: 30px;
-    
+    display:inline-block;
 
 }
+.minSide h1  {
+    display:inline-block;
+    
+    
+}
+
 
 .minSide h1 p {
     display:inline-block;
@@ -53,13 +62,15 @@
     border: 2px slateblue double;
     border-radius: 50%;
     padding-left: 10%;
-    padding-top: 10%;
-    margin-top: 5%;
+    padding-top: 7%;
+  
+    background-color: aqua;
 }
 
 .resultScreen {
     margin: 10%;
-    margin-left: 30%;
+    margin-left: 40%;
+    margin-top: 5%;
   
 
 }
