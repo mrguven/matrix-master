@@ -82,7 +82,7 @@ let control=true; // to prevent run function for second time
 
 result.addEventListener('click',runFunction )
 
-secBreakContent=0;
+
 secContent=0;
 
 function beginClock () {
