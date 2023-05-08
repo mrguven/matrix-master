@@ -75,3 +75,18 @@ console.log(Wednesday(titleCase));
 
 
 
+
+
+
+
+
+
+//Wednesday : Search and Replace
+
+
+
+
+
+
+
+
