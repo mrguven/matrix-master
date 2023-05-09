@@ -26,3 +26,25 @@ gril.introduceyourself();
 
 
 
+class Commnent extends Person {
+
+post;
+userComment;
+constructor (post,userComment,name1){
+super(name1);
+
+this.post= post;
+this.userComment=userComment;
+
+}
+addPost (){ console.log(`this is my ${this.post} and ${this.userComment} ${this.name1}`)
+
+}
+
+}
+
+let userPost= new Commnent('name ','asdfasdf');
+
+//console.log(userPost)
+
+console.log(userPost.addPost());
