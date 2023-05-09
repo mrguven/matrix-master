@@ -214,7 +214,17 @@ console.log(Censorship(communistCensorship,"Matrix"));
 let longestWord ="The quick brown fox jumped over the lazy dog";
 
 
-function findLongestWord() {
+function findLongestWord(wr) {
 
+    let textArray= wr.split(" ");
+    let textNumber=0;
 
+    for(let i=0;i<textArray.length;i++) {
+        
+        (textArray[i].length>textNumber)? textNumber=textArray[i].length : textNumber
+    }
+
+return textNumber;
 }
+
+console.log(findLongestWord(longestWord));

@@ -201,7 +201,7 @@ function largestOfFour(largestOfFour) {
     
     for(let i=0;i<largestOfFour.length;i++) {
         maximumNumber=0;
-        for(let j=0;j<4;j++) {
+        for(let j=0;j<largestOfFour[i].length;j++) {
             if(largestOfFour[i][j] > maximumNumber) {
                 maximumNumber=largestOfFour[i][j] ;
                         
