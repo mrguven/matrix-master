@@ -211,7 +211,7 @@ console.log(Censorship(communistCensorship,"Matrix"));
 
 //Tuesday: Find the longest Word in a String
 
-let longestWord ="The quick brown fox jumped over the lazy dog";
+let longestWord ="Solve the following exercises and submit your answers";
 
 
 function findLongestWord(wr) {

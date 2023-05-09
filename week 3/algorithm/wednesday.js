@@ -50,7 +50,7 @@ console.log(Factorialize2(5));
 
 
 
-let titleCase="I'm a little tea pot";
+let titleCase="I'm a little tEa pot";
 
 function Wednesday(titleCase) {
 let titleString=[];
@@ -58,7 +58,9 @@ titleString= titleCase.split(' ');
 console.log(titleString);
 for(let i=0;i<titleString.length;i++) {
 
-    titleString[i] = titleString[i].charAt(0).toUpperCase() + titleString[i].slice(1);
+    
+
+    titleString[i] = titleString[i].charAt(0).toUpperCase() + titleString[i].toLowerCase().slice(1);
 
 }
 titleCase= titleString.join(' ');
@@ -66,6 +68,8 @@ return titleCase;
 }
 
 console.log(Wednesday(titleCase));
+
+
 
 
 
