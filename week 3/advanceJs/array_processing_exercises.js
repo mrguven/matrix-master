@@ -52,3 +52,28 @@ let names = users.map(x => x.name)
 
 
 console.log( names ) // John, Pete, Mary
+
+
+
+
+// Exercises 3
+// Write the function getAverageAge(users) that gets an array
+//  of objects with property age and gets the average.
+
+
+
+
+
+ function getAverageAge(users)  {
+    let newSum=0;
+    users.forEach(element => { 
+       
+        newSum+=element.age;
+
+         
+    });
+
+return newSum
+ }
+
+console.log( getAverageAge(users));

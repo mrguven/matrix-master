@@ -40,7 +40,7 @@ const gril= new Person('Gril');
 
 gril.introduceyourself();
 
-
+//---------------------------------
 
 
 class Comment extends Person {
@@ -54,17 +54,17 @@ this.userComment=userComment;
 
 }
 addPost (){  console.log(`this is my ${this.post} and ${this.userComment} ${this.name1}`)
-
 }
-
 }
 
 let userPost= new Comment('name ','asdfasdf','this is my name');
-
 console.log(userPost)
-
 userPost.addPost();
 
+
+
+
+//--------------------------
 
 
 const myPromise= new Promise((resolve,reject) => {
@@ -83,6 +83,7 @@ myPromise.then( (resolvedValue)=> console.log(resolvedValue),
 (error)=> console.log(error)
 
 );
+
 
 
 
