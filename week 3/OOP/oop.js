@@ -76,10 +76,13 @@ const myPromise= new Promise((resolve,reject) => {
 
 });
 
+const onResolved= (resolvedValue)=> console.log(resolvedValue);
+const onRejected=(error)=> console.log(error);
+myPromise.then(onResolved,onRejected);
+myPromise.then( (resolvedValue)=> console.log(resolvedValue),
+(error)=> console.log(error)
 
-myPromise.then(
-    
-)
+);
 
 
 
