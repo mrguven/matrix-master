@@ -78,6 +78,7 @@ const myPromise= new Promise((resolve,reject) => {
 
 const onResolved= (resolvedValue)=> console.log(resolvedValue);
 const onRejected=(error)=> console.log(error);
+
 myPromise.then(onResolved,onRejected);
 myPromise.then( (resolvedValue)=> console.log(resolvedValue),
 (error)=> console.log(error)
@@ -86,5 +87,29 @@ myPromise.then( (resolvedValue)=> console.log(resolvedValue),
 
 
 
+let usersInfo= {
+    firstName:'dfj',
+    age:10,
+    city:'Rotterdam'
+}
+
+function getData(info) {
+
+    return new Promise((resolve,reject) =>{
+        let userAge=info.age;
+
+        if(userAge>18) {
+            resolve('you have permission')
+        }
+        else {
+            reject('you must older then 18')
+        }
+
+    }).then((resolved)=>{console.log(resolved)})
+    .catch((rejected=> console.log(rejected)))
 
 
+
+
+}
+console.log(getData(usersInfo));

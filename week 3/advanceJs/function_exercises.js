@@ -68,16 +68,16 @@ console.log(caPow(4,2));
 // Create an object calculator with three methods:
 
 
-//I am not sure solution of this exercise 
-let calculator = {
-  read(a,b){return calculator.obj1=a, calculator.obj2=b},
-  sum(a,b) {return a+b},
-  mul(a,b) {return a*b}
-};
+ 
+// let calculator = {//I am not sure solution of this exercise
+//   read(a,b){return calculator.obj1=a, calculator.obj2=b},
+//   sum(a,b) {return a+b},
+//   mul(a,b) {return a*b}
+// };
 
-calculator.read();
-alert( calculator.sum() );
-alert( calculator.mul() );
+// calculator.read();
+// alert( calculator.sum() );
+// alert( calculator.mul() );
 
 
 
