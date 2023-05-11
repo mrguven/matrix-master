@@ -214,3 +214,19 @@ function largestOfFour(largestOfFour) {
   }
 
 console.log(maxArray);
+
+
+
+
+
+//Monday: Bubble Sort
+
+let bubbleArray=[7,5,2,4,3,9];
+
+
+function bubbleSort(argd) {
+
+        
+
+
+}

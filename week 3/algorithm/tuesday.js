@@ -228,3 +228,11 @@ return textNumber;
 }
 
 console.log(findLongestWord(longestWord));
+
+
+
+
+
+//Tuesday : Selection Sort
+
+

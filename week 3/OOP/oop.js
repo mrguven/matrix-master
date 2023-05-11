@@ -17,18 +17,13 @@
 
 // const myPromise = new Promise(resolve,reject)
 
-
-
-
-
-
 class Person {
     name1;
-    constructor(name1){
+    constructor(name1){  // this variable is using in the class
         this.name1=name1;
     };
 
-    introduceyourself() {
+    introduceyourself() {  //this is method of class
         console.log(`my name is ${this.name1} `);
     }
 
@@ -36,14 +31,14 @@ class Person {
 
 }
 
-const gril= new Person('Gril');
+const gril= new Person('Gril');  //create an object of class with its parameter
 
-gril.introduceyourself();
+gril.introduceyourself(); 
 
 //---------------------------------
 
 
-class Comment extends Person {
+class Comment extends Person {  // this is sub-class- inherited of person class
 
 
 constructor (name1,post,userComment){
@@ -89,17 +84,24 @@ myPromise.then( (resolvedValue)=> console.log(resolvedValue),
 
 let usersInfo= {
     firstName:'dfj',
-    age:10,
-    city:'Rotterdam'
+    age:20,
+    city:'Rotterdam',
+    admin:true
 }
 
-function getData(info) {
+let secretObj= {
+    id:2323523,
+    accountnumber:'nl3534634643',
+
+}
+
+function getData(info,newData) {
 
     return new Promise((resolve,reject) =>{
         let userAge=info.age;
 
-        if(userAge>18) {
-            resolve('you have permission')
+        if(userAge>18 && info.admin) {
+            resolve(newData)
         }
         else {
             reject('you must older then 18')
@@ -112,4 +114,33 @@ function getData(info) {
 
 
 }
-console.log(getData(usersInfo));
+console.log(getData(usersInfo,secretObj));
+
+
+
+
+userInput= document.getElementById('user');
+acceptButton= document.getElementById('accept-btn');
+
+acceptButton.addEventListener('click',  function() {
+
+
+
+    getData(usersInfo,secretObj);
+
+} )
+
+
+
+class UserInfo {
+    birhtDate;
+    accountInfo;
+
+    constructor(birhtDate,accountInfo,tlfNumber) {
+        this.birhtDate=birhtDate;
+        this.accountInfo=accountInfo;
+        this.tlfNumber=tlfNumber;
+        
+
+    }
+}
