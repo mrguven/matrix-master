@@ -40,7 +40,6 @@ gril.introduceyourself();
 
 class Comment extends Person {  // this is sub-class- inherited of person class
 
-
 constructor (name1,post,userComment){
 super(name1);
 
@@ -119,18 +118,15 @@ console.log(getData(usersInfo,secretObj));
 
 
 
-userInput= document.getElementById('user');
-acceptButton= document.getElementById('accept-btn');
+let userInput= document.getElementById('user');
+let acceptButton= document.getElementById('accept-btn');
 
+
+let outPut= document.getElementById('outPut');
 acceptButton.addEventListener('click',  function() {
-
-
-
     getData(usersInfo,secretObj);
-
+    newUser.sendOutPut()
 } )
-
-
 
 class UserInfo {
     birhtDate;
@@ -140,7 +136,24 @@ class UserInfo {
         this.birhtDate=birhtDate;
         this.accountInfo=accountInfo;
         this.tlfNumber=tlfNumber;
-        
-
     }
+
+    
 }
+
+
+
+
+
+
+
+function NewConstructor (title,auther,year) {
+this.title=title;
+this.auther-auther;
+this.year=year;
+
+this.sendOutPut=function() { return  outPut.innerHTML= `this is ${this.title}, and my name is ${this.auther}, publish date is ${this.year}`
+}
+}
+
+let newUser = new NewConstructor('bla bla bla','andre','1987')
