@@ -10,7 +10,6 @@ function NewConstructor (title,auther,year) {
     and author is ${this.auther}, publish date is ${this.year}`}
     }
 
-
 $('#btn-append').click(function() {
         let newUser = new NewConstructor($('#userInput').val(),$('#auther').val(),$('#year').val())
         let result=newUser.sendOutPut()
