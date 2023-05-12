@@ -1,0 +1,51 @@
+.cover{
+    background-color: rgb(225, 234, 236);
+    width: 70%;
+    padding-left: 1%;
+    margin: 10%;
+    border-radius: 20%;
+   
+    
+}
+
+.screenClass {
+    padding-left: 20%;
+    width: 90%;
+    }
+.screenClass input {
+    width: 60%;
+    height: 150px;
+     font-size: 750%;
+     color: rgb(25, 27, 112);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left:3% ;
+    border-radius: 30%;
+}
+/* @media screen and (max-width: 420px){
+    .screenClass input { font-size: 450%;}
+    .buttonClass{ 
+        font-size: 300px;}
+} */
+
+
+.buttonClass{
+    display: inline-block;
+    margin-left: 15%;
+    width: 120%;
+    
+}
+
+.buttonClass button{
+    height: 100px;
+    border-radius: 50px;
+    width: 10%;
+    margin: 2%;
+    
+    margin-top: 30px;
+    background-color: bisque;
+    display: inline;
+    
+}
+/* .timerClass{
+    
+} */
