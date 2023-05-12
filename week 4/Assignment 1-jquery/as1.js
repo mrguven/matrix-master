@@ -5,18 +5,18 @@
 $('#btn-fadeOut').click(function(){
     $('#text-fadeOut').fadeOut(3000)
 })
-
+function NewConstructor (title,auther,year) {
+    this.title=title;
+    this.auther=auther;
+    this.year=year;
+    
+    this.sendOutPut=function() { return `this is ${this.title}, and author is ${this.auther}, publish date is ${this.year}`
+    }
+    }
 
 
 $('#btn-append').click(function() {
-    function NewConstructor (title,auther,year) {
-        this.title=title;
-        this.auther=auther;
-        this.year=year;
-        
-        this.sendOutPut=function() { return `this is ${this.title}, and author is ${this.auther}, publish date is ${this.year}`
-        }
-        }
+   
         
             
         let newUser = new NewConstructor($('#userInput').val(),$('#auther').val(),$('#year').val())
