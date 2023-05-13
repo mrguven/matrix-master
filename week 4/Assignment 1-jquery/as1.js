@@ -9,12 +9,19 @@ function NewConstructor (title,auther,year) {
     this.sendOutPut=function() { return `this is ${this.title}, 
     and author is ${this.auther}, publish date is ${this.year}`}
     }
-
+let sts=true;
 $('#btn-append').click(function() {
+    sts=false;
         let newUser = new NewConstructor($('#userInput').val(),$('#auther').val(),$('#year').val())
         let result=newUser.sendOutPut()
         console.log($('#userInput').val());
-    $('#idList').append('<li>',result, '</li>') // ?? I can not this code. 
+    $('#idList').append('<li>'+result+ '</li>') 
+    if(!sts) {
+        $('#userInput').val('');
+        $('#auther').val('');
+        $('#year').val('')
+    }
+
     })
     $('#btn-append').click(function() {
        
