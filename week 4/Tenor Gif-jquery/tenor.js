@@ -2,7 +2,7 @@
 let  newGif;
 $('#btn-submit').click(function(){
     let searchWord= $('#search').val();
-    if($('#search').val()=='') {
+    if(searchWord=='') {
         alert('you write something')
      }
     console.log(searchWord);
@@ -14,13 +14,17 @@ console.log(searchWord);
          newGif=rData
        newGif=JSON.parse(newGif)
         console.log(newGif);
- $('#result').attr('src',newGif.results[0]["media_formats"]["nanogif"]["url"])
+ $('#result').attr('src',newGif.results[0]["media_formats"]["nanogif"]["url"]);
+ 
+for(let i= 0;i<newGif.results.length;i++) {
+    $("#result").append("<img src="+ newGif.results[i]["media_formats"]["nanogif"]["url"] +" >")
+}
     }).catch((err)=>console.log(err));
     }
 $('#search').val("");
 });
 
-
+console.log(newGif);  // how can I use return data out of the function.
 
 let httpRequestAction=(method,theUrl,data)=>{
     let promise = new Promise((res,rej) => {
