@@ -2,3 +2,16 @@
     
     margin: 10px;
 }
+
+#search-Area {
+    margin-left: 5%;
+   margin-top : 2%;
+}
+
+#search{
+    display: inline-block;
+}
+
+#btn-submit {
+    display: inline-block;
+}
