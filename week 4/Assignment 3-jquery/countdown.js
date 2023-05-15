@@ -44,10 +44,11 @@ if (startStatus) {
             milisec-=1;
             screen.val(min+':'+sec+':'+milisec);
             if(sec==0 && min==0 && milisec==0) {
-                screen.val('00:00:00')
+                screen.val('00:00:00');
                 $('ol').append('<li>'+' <b>Timer </b>'+'<b> '+ count + '</b> ' +':'+'  ' +lastmin+ ' :00:00'+ '</li>');
                 startStatus=true;
-                cond=true
+                cond=true;
+                alert('the count down finished');
             }
         }
        
@@ -59,7 +60,7 @@ if (startStatus) {
         }
         
        else if(sec==0 && min!=0) {
-        sec=59
+        sec=59;
             min-=1;
             screen.val(min+':'+sec+':'+milisec);
             }

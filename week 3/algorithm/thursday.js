@@ -102,3 +102,20 @@ function convertUpperCase(str) {
 }
 
 console.log(convertUpperCase(fistUp));
+
+
+
+//Thursday: Sum All Primes
+
+function sumPrimes(num) {
+    const element;
+for (let index = 0; index <= num; index++) {
+      if()
+    
+}
+
+
+
+    return num;
+  }
+  sumPrimes(10);

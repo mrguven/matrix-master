@@ -10,7 +10,7 @@ $('#btn-submit').click(function(){
     if(searchWord) {
     
 console.log(searchWord);
-    httpRequestAction('GET', 'https://tenor.googleapis.com/v2/search?q='+ searchWord + '&key=AIzaSyAAtnVuL7-_6mbI1w08TsOU_rGFiBrMVBI&limit=8')  // it should be assign to variable to use easier way.
+    httpRequestAction('GET', 'https://tenor.agoogleapis.com/v2/search?q='+ searchWord + '&key=AIzaSyAAtnVuL7-_6mbI1w08TsOU_rGFiBrMVBI&limit=8')  // it should be assign to variable to use easier way.
     .then((rData)=>{
          newGif=rData
        newGif=JSON.parse(newGif)
@@ -20,7 +20,7 @@ console.log(searchWord);
 for(let i= 0;i<newGif.results.length;i++) {
     $("#result").append("<img src="+ newGif.results[i]["media_formats"]["nanogif"]["url"] +" >")
 }
-    }).catch((err)=>console.log(err));
+    }).catch((err)=>alert(err));
     }
 $('#search').val("");
 return newGif;
@@ -40,7 +40,7 @@ xmlrequest.onload=()=>{            //shoul I use if statement with this.status=2
   
 }
 xmlrequest.onerror=()=> {
-    rej((err)=> console.log(err))   }
+    rej('went wrong something')   }
 xmlrequest.send(JSON.stringify(data))
 })
 return promise;
