@@ -26,7 +26,7 @@ $('#search').val("");
 return newGif;
 });
 
- // how can I use return data out of the function?
+
 
 let httpRequestAction=(method,theUrl,data)=>{
     let promise = new Promise((res,rej) => {
