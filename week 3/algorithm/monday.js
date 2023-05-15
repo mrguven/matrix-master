@@ -221,12 +221,27 @@ console.log(maxArray);
 
 //Monday: Bubble Sort
 
-let bubbleArray=[7,5,2,4,3,9];
+let bubbleArray=[9,7,5,4,3,1];
 
 
 function bubbleSort(argd) {
 
-        
+ 
 
+    for(let i= argd.length-1;i>=0;i--) {
+        for(let j=1;j<argd.length;j++) {
+            if(argd[j-1]>argd[i]) {
+                let temp=argd[j-1];
+                argd[i]=argd[j-1];
+                argd[j-1]=temp;
+
+            }
+        }
+    }
+ 
+
+
+return argd;
 
 }
+console.log(bubbleSort(bubbleArray));

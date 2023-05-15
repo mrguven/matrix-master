@@ -23,9 +23,10 @@ for(let i= 0;i<newGif.results.length;i++) {
     }).catch((err)=>console.log(err));
     }
 $('#search').val("");
+return newGif;
 });
 
-console.log(newGif);  // how can I use return data out of the function?
+ // how can I use return data out of the function?
 
 let httpRequestAction=(method,theUrl,data)=>{
     let promise = new Promise((res,rej) => {
