@@ -1,5 +1,6 @@
 
 let  newGif;
+
 $('#btn-submit').click(function(){
     let searchWord= $('#search').val();
     if(searchWord=='') {
@@ -9,7 +10,7 @@ $('#btn-submit').click(function(){
     if(searchWord) {
     
 console.log(searchWord);
-    httpRequestAction('GET', 'https://tenor.googleapis.com/v2/search?q='+ searchWord + '&key=AIzaSyAAtnVuL7-_6mbI1w08TsOU_rGFiBrMVBI&limit=8')
+    httpRequestAction('GET', 'https://tenor.googleapis.com/v2/search?q='+ searchWord + '&key=AIzaSyAAtnVuL7-_6mbI1w08TsOU_rGFiBrMVBI&limit=8')  // it should be assign to variable to use easier way.
     .then((rData)=>{
          newGif=rData
        newGif=JSON.parse(newGif)
@@ -24,12 +25,12 @@ for(let i= 0;i<newGif.results.length;i++) {
 $('#search').val("");
 });
 
-console.log(newGif);  // how can I use return data out of the function.
+console.log(newGif);  // how can I use return data out of the function?
 
 let httpRequestAction=(method,theUrl,data)=>{
     let promise = new Promise((res,rej) => {
 let xmlrequest=new XMLHttpRequest();
-xmlrequest.open(method,theUrl)
+xmlrequest.open(method,theUrl);
 if(data) {
     xmlrequest.setRequestHeader('Content-Type', 'application/json')
 }

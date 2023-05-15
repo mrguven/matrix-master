@@ -79,8 +79,6 @@ myPromise.then( (resolvedValue)=> console.log(resolvedValue),
 
 );
 
-
-
 let usersInfo= {
     firstName:'dfj',
     age:20,
@@ -109,13 +107,8 @@ function getData(info,newData) {
     }).then((resolved)=>{console.log(resolved)})
     .catch((rejected=> console.log(rejected)))
 
-
-
-
 }
 console.log(getData(usersInfo,secretObj));
-
-
 
 
 let userInput= document.getElementById('user');
@@ -141,12 +134,6 @@ class UserInfo {
     
 }
 
-
-
-
-
-
-
 function NewConstructor (title,auther,year) {
 this.title=title;
 this.auther-auther;
@@ -157,3 +144,15 @@ this.sendOutPut=function() { return  outPut.innerHTML= `this is ${this.title}, a
 }
 
 let newUser = new NewConstructor('bla bla bla','andre','1987')
+
+
+
+
+//with prototype, we can add new method to Class .
+
+// UserInfo.prototype.getNewage=()=> {
+// let years= new Date().getFullYear()- this.year;
+
+// return `${this.birhtDate} is bla bla bla....`
+
+// }
