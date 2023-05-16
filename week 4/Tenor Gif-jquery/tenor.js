@@ -10,7 +10,7 @@ $('#btn-submit').click(function(){
     if(searchWord) {
     
 console.log(searchWord);
-    httpRequestAction('GET', 'https://tenor.agoogleapis.com/v2/search?q='+ searchWord + '&key=AIzaSyAAtnVuL7-_6mbI1w08TsOU_rGFiBrMVBI&limit=8')  // it should be assign to variable to use easier way.
+    httpRequestAction('GET', 'https://tenor.googleapis.com/v2/search?q='+ searchWord + '&key=AIzaSyAAtnVuL7-_6mbI1w08TsOU_rGFiBrMVBI&limit=8')  // it should be assign to variable to use easier way.
     .then((rData)=>{
          newGif=rData
        newGif=JSON.parse(newGif)

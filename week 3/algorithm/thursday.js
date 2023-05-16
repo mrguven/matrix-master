@@ -108,14 +108,31 @@ console.log(convertUpperCase(fistUp));
 //Thursday: Sum All Primes
 
 function sumPrimes(num) {
-    const element;
-for (let index = 0; index <= num; index++) {
-      if()
+    let numbers=0 ;
+    if(num>3) {
+for ( index = 4; index <= num; index++) {
+    for(let i=2;i<=index;i++) {
+        
+      if(index%i==0){
+       break;
+       }
+     else if(index%i==0) {
+        numbers+=numbers
+     }
+        
     
 }
+ 
+
+console.log(numbers);
+}
+    }
 
 
+    else {
+        return 5;
+    }
 
-    return num;
+    //return index;
   }
   sumPrimes(10);
