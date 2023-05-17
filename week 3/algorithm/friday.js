@@ -81,7 +81,7 @@ console.log(findNumber(highestNumber));
 
 function  Fibonacci(fib) {
 
-    let firstNumber=0;
+    let firstNumber=1;
     let secNumber=1;
     let total=0;
     let fibArray=[];
@@ -93,13 +93,11 @@ for (let i=0;i<fib;i++) {
     firstNumber=secNumber;
     secNumber=total;
     
-
-
 }
 return fibArray[fib-1]; // we use min (-1) because we have zero in the array. thus we must ignore it. 
 }
 
-console.log(Fibonacci(43));
+console.log(Fibonacci(7));
 
 
 

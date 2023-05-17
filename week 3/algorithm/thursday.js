@@ -107,32 +107,37 @@ console.log(convertUpperCase(fistUp));
 
 //Thursday: Sum All Primes
 
+
+let numbers=0 ;
 function sumPrimes(num) {
-    let numbers=0 ;
+    
     if(num>3) {
 for ( index = 4; index <= num; index++) {
-    for(let i=2;i<=index;i++) {
+    let con=true;
+    
+    for(let i=2;i<=index-1;i++) {
         
       if(index%i==0){
+         con=false;
        break;
        }
-     else if(index%i==0) {
-        numbers+=numbers
-     }
-        
-    
+   
 }
- 
-
-console.log(numbers);
+if(con) {
+    let neew=index;
+    numbers+=neew;
+  
 }
+}
+return numbers+=5;
     }
 
-
-    else {
+    if(num==3) {
         return 5;
     }
 
-    //return index;
+    if(num==2) {
+        return 2;
+    }
   }
-  sumPrimes(10);
+  console.log(sumPrimes(977));;

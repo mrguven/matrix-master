@@ -76,8 +76,17 @@ console.log(Wednesday(titleCase));
 //Wednesday: Power N
 
 
+function power(firsNumber,squareNumber) {
+    if(firsNumber==0){
+        return 1;
+    }
+    else{
+        return  firsNumber * power(firsNumber,squareNumber-1)
+    }
+}
 
 
+console.log(power(3,3));
 
 
 
