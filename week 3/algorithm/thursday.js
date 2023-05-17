@@ -84,24 +84,6 @@ total+=i
  //--------------------------------
 
 
- let fistUp= 'return the provided string with the first letter of each word capitalized.';
-
-function convertUpperCase(str) {
-    let newArray=[];
-    
-    str= str.split(' ');
-    
-    for(let i=0;i<str.length;i++) {
-        str[i]=str[i].charAt(0).toUpperCase() + str[i].toLowerCase().slice(1)
-    newArray.push(str[i])
-    }
-    newArray=newArray.join(' ')
-    str = newArray
-    return str;
-   
-}
-
-console.log(convertUpperCase(fistUp));
 
 
 
