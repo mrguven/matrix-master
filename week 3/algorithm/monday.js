@@ -221,6 +221,14 @@ console.log(maxArray);
 
 //Monday: Bubble Sort
 
+//create 2 for loop
+// but first loop start end of the array to check together all array with second loop
+//
+
+
+
+
+
 let bubbleArray=[9,7,5,4,3,1];
 
 
