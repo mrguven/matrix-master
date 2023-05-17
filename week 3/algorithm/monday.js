@@ -253,3 +253,41 @@ return argd;
 
 }
 console.log(bubbleSort(bubbleArray));
+
+
+
+//Monday: Game of 3s
+
+
+function divNumber(asd) {
+
+        if (asd==1) {
+            return 1
+        }
+
+   else  if(asd%3==0) {
+      asd=asd/3; 
+      console.log(asd);
+      if (asd==1) {
+        return 1
+    }
+      divNumber(asd)      
+    }
+
+   else  if(asd%3!=0) {
+        if(asd+1%3==0) {
+            asd=asd+1
+            console.log(asd);
+            divNumber(asd)
+        }
+        else if(asd-1%3==0) {
+            asd=asd-1;
+divNumber(asd);
+        }
+     }
+return asd;
+
+
+}
+
+console.log(divNumber(8));

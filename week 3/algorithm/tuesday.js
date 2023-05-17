@@ -133,6 +133,8 @@ for (let i=0;i<fib;i++) {
     firstNumber=secNumber;
     secNumber=total;
     
+    
+    
 
 
 }
@@ -236,3 +238,15 @@ console.log(findLongestWord(longestWord));
 //Tuesday : Selection Sort
 
 
+let selectionSort=[9,7,5,4,3,1];
+
+function selSort (dt) {
+
+    let minNumber=0;
+    let indexElement=0;
+
+    for(let i=0;i<dt.length;i++){}
+
+
+
+}

@@ -116,3 +116,17 @@ console.log(Fibonacci(7));
 
 
 //Friday: r Triangle
+
+
+function triangel (rt) {
+    if (rt == 0) {
+        return 0;
+    } 
+
+else {
+ return    rt + triangel(rt-1);
+}
+}
+
+console.log(triangel(2));
+
