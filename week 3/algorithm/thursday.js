@@ -105,13 +105,13 @@ for ( index = 4; index <= num; index++) {
        }
    
 }
-if(con) {
+    if(con) {
     let neew=index;
     numbers+=neew;
   
 }
 }
-return numbers+=5;
+    return numbers+=5;
     }
 
     if(num==3) {
@@ -122,4 +122,4 @@ return numbers+=5;
         return 2;
     }
   }
-  console.log(sumPrimes(977));;
+  console.log(sumPrimes(10));;

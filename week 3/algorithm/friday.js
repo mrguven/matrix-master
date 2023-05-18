@@ -97,7 +97,7 @@ for (let i=0;i<fib;i++) {
 return fibArray[fib-1]; // we use min (-1) because we have zero in the array. thus we must ignore it. 
 }
 
-console.log(Fibonacci(7));
+console.log(Fibonacci(4));
 
 
 

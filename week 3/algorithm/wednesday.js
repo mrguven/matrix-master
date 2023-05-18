@@ -29,7 +29,6 @@ function factorialize2(num) {
         
     //     }
 
-
         for(let i=num-1;i>0;i--) {
             result=result * i;
             
@@ -38,8 +37,9 @@ function factorialize2(num) {
     return result;
 }
 
-
 console.log(factorialize2(5));
+
+
 
 
 //--------
