@@ -237,9 +237,9 @@ function bubbleSort(argd) {
  
 
     for(let i= argd.length-1;i>=0;i--) {
-        for(let j=1;j<argd.length;j++) {
+        for(let j=1;j<i;j++) {
             if(argd[j-1]>argd[i]) {
-                let temp=argd[j-1];
+                let temp=argd[i];
                 argd[i]=argd[j-1];
                 argd[j-1]=temp;
 
@@ -260,34 +260,24 @@ console.log(bubbleSort(bubbleArray));
 
 
 function divNumber(asd) {
+    if(asd==1){
+        return 1;
+       }
+    
+if(asd%3==0) {
+    return divNumber(asd/3)
+}
+else if(asd%3!=0){
+    if((asd+1)%3==0) {
+        
+       return divNumber((asd+1)/3)
 
-        if (asd==1) {
-            return 1
-        }
-
-   else  if(asd%3==0) {
-      asd=asd/3; 
-      console.log(asd);
-      if (asd==1) {
-        return 1
     }
-      divNumber(asd)      
+    if((asd-1)%3==0) {
+        
+        return divNumber((asd-1)/3)
     }
-
-   else  if(asd%3!=0) {
-        if(asd+1%3==0) {
-            asd=asd+1
-            console.log(asd);
-            divNumber(asd)
-        }
-        else if(asd-1%3==0) {
-            asd=asd-1;
-divNumber(asd);
-        }
-     }
-return asd;
-
-
+}
 }
 
-console.log(divNumber(8));
+ console.log(divNumber(14));
