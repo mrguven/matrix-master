@@ -238,15 +238,56 @@ console.log(findLongestWord(longestWord));
 //Tuesday : Selection Sort
 
 
-let selectionSort=[9,7,5,4,3,1];
+let selectionSort=[9,7,5,14,3,1];
 
 function selSort (dt) {
 
     let minNumber=0;
     let indexElement=0;
 
-    for(let i=0;i<dt.length;i++){}
+    for(let i=0;i<dt.length;i++){
+        for (let j=i;j<dt.length;j++  )
+
+        if(dt[j]<dt[i]) {
+            let minNumber= dt[i];
+            dt[i]=dt[j];
+            dt[j]=minNumber;
+        }
+
+    }
 
 
-
+return dt
 }
+
+console.log(selSort (selectionSort));
+
+
+
+//Sort a nearly sorted
+
+
+/* Function to sort an array using insertion sort*/
+
+let insertion=[9,7,5,14,3,1]
+function insertionSort(Asd, size)
+{
+   var i, key, j;
+   for (i = 1; i < size; i++)
+   {
+       key = Asd[i];
+       j = i-1;
+ 
+       /* Move elements of A[0..i-1], that are
+          greater than key, to one
+          position ahead of their current position.
+          This loop will run at most k times */
+       while (j >= 0 && Asd[j] > key)
+       {
+           Asd[j+1] = Asd[j];
+           j = j-1;
+       }
+       Asd[j+1] = key;
+   }
+}
+ 

@@ -104,7 +104,7 @@ console.log(Wednesday(titleCase));
 
 
 function power(firsNumber,squareNumber) {
-    if(firsNumber==0){
+    if(squareNumber==0){
         return 1;
     }
     else{
@@ -123,9 +123,20 @@ console.log(power(3,3));
 
 //Wednesday : Search and Replace
 
+let= replaceString="A quick brown fox jumped over the lazy dog";
+function myReplace(str, before, after) {
+
+     str= str.replace(before,after);
+        
+    return str;
+  }
+console.log( myReplace(replaceString, "jumped", "leaped"));
 
 
 
+
+
+ 
 
 
 
