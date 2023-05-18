@@ -289,3 +289,13 @@ function insertionSort(Asd, size)
    return Asd;
 }
  console.log(insertionSort(insertion,insertion.length));
+
+
+
+ //Tuesday: Bunny Ears
+
+function bunny(ears) {
+  return  (ears==0)?  0 : 2+bunny(ears-1);
+}
+
+console.log(bunny(3));
