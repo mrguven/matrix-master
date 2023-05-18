@@ -132,11 +132,6 @@ for (let i=0;i<fib;i++) {
     total = firstNumber+secNumber;
     firstNumber=secNumber;
     secNumber=total;
-    
-    
-    
-
-
 }
 return fibArray;
 }
@@ -242,8 +237,7 @@ let selectionSort=[9,7,5,14,3,1];
 
 function selSort (dt) {
 
-    let minNumber=0;
-    let indexElement=0;
+    
 
     for(let i=0;i<dt.length;i++){
         for (let j=i;j<dt.length;j++  )
@@ -264,12 +258,15 @@ console.log(selSort (selectionSort));
 
 
 
+
+
 //Sort a nearly sorted
 
 
 /* Function to sort an array using insertion sort*/
 
-let insertion=[9,7,5,14,3,1]
+let insertion=[9,7,5,14,3,1]  //I did not  write this code. I took just it for an example
+
 function insertionSort(Asd, size)
 {
    var i, key, j;
@@ -289,5 +286,6 @@ function insertionSort(Asd, size)
        }
        Asd[j+1] = key;
    }
+   return Asd;
 }
- 
+ console.log(insertionSort(insertion,insertion.length));

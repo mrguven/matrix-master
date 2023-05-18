@@ -14,7 +14,7 @@
 
 
 
-function Factorialize2(num) {
+function factorialize2(num) {
     let result=num;
    
     if(num<0) {
@@ -22,22 +22,37 @@ function Factorialize2(num) {
 
     }
    
-
-    else if (num>0) {
-
-        while(num>1) {
-        num--;
-        result= result* num;
+    // else if (num>0) {
+    //     while(num>1) {
+    //     num--;
+    //     result= result* num;
         
+    //     }
+
+
+        for(let i=num-1;i>0;i--) {
+            result=result * i;
+            
         }
-    }
+    
     return result;
 }
 
 
-console.log(Factorialize2(5));
+console.log(factorialize2(5));
 
 
+//--------
+function fac(nu) {
+    if(nu==0) {
+        return 1;
+    }
+    else {
+        return nu * fac(nu-1)
+    }
+}
+
+console.log(fac(5));
 
 //Wednesday : Title Case a Sentence
 
@@ -57,9 +72,6 @@ let titleString=[];
 titleString= titleCase.split(' ');
 console.log(titleString);
 for(let i=0;i<titleString.length;i++) {
-
-    
-
     titleString[i] = titleString[i].charAt(0).toUpperCase() + titleString[i].toLowerCase().slice(1);
 
 }
