@@ -25,7 +25,8 @@ xhttp.send();
 
 $('#get-Data').click(function () {
     httpRequest('GET','https://jsonplaceholder.typicode.com/posts/1').then((respondData)=> {let returnData= respondData;
-    document.getElementById('show-Data').innerHTML=returnData;
+   //  returnData=JSON.parse(returnData) we did that convert from jason to js object in httpRequest function 
+    document.getElementById('show-Data').innerHTML=returnData.body;
     
     console.log(returnData);
 });
@@ -59,3 +60,31 @@ $('#send-data').click(function () {
     console.log(respondData)).catch((err) => console.log(err))
 })
 
+
+$('#send').click(function() {
+
+    postName();
+
+})
+
+
+function postName () {
+
+
+
+let name1= $('#name1').val();
+let params=`name= ${name1}`;
+
+let xhr=new XMLHttpRequest();
+xhr.open('PUT', 'info.txt',true);
+xhr.onload(function(){
+    console.log('l;kadsjg');
+})
+xhr.setRequestHeader('Content-Type','aplication/x-www-form-urlencoded')
+
+
+
+xhr.send(params)
+
+
+}
