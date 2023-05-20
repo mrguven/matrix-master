@@ -136,7 +136,12 @@ console.log(power(3,3));
 //Wednesday : Search and Replace
 
 
-
+//create a function with 3 arguments
+//the string argument convert to array 
+//use for loop in order to check all array element that equal aimed element
+// if they are same change the other element that wanted
+// after that use join method to convert the string again
+// and return result.
 
 
 
