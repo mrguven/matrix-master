@@ -1,4 +1,4 @@
-// global object
+//global object
 
 let {people,ages}=require('./people') //this and 
 
@@ -9,3 +9,5 @@ let {people,ages}=require('./people') //this and
  const os =require('os');
 
  console.log(os.platform(),os.homedir());
+
+
