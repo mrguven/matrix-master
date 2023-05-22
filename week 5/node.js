@@ -1,6 +1,6 @@
 let http= require('http');
 const fs = require('fs');
-const express= require('express')
+
 
 http.createServer(function (req,res)  {
     
@@ -79,4 +79,9 @@ if(fs.existsSync('./deleteme.txt')) {
 
 //Streams & Buffers
 
+//   const writeStream=fs.createWriteStream('./test3.txt')
+
+ 
+// writeStream.write('\nhello world\n')
+// writeStream.write('het het')
   
