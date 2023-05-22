@@ -1,4 +1,5 @@
 let http= require('http');
+const fs = require('fs');
 
 http.createServer(function (req,res)  {
     
@@ -6,17 +7,10 @@ http.createServer(function (req,res)  {
     res.write('erssdasdfsdfdsfldf   ');
     res.end('hello world');
     
-    
-
-}).listen(8080)
+    }).listen(8080)
 
 
-
-const fs = require('fs');
-
-
-
-//reading file
+//reading file------------
 
 fs.readFile('./index.html', (err,data) => {
 
@@ -32,7 +26,7 @@ else {
 console.log('last line');
 
 
-//writing file
+//writing file-------------
 
 
 
@@ -46,7 +40,7 @@ fs.writeFile('./test1.txt', 'this is test' , ()=> {
 
 
 
-//directories
+//directories------------
 
 
 if(!fs.existsSync ('./assets'))  {
@@ -69,13 +63,7 @@ fs.mkdir('./assets' , (err)=> {
 }
 
 
-
-
-
-
-
-
-//deleting file
+//deleting file-------------
 
 
 if(fs.existsSync('./deleteme.txt')) {
@@ -87,3 +75,7 @@ if(fs.existsSync('./deleteme.txt')) {
         }
     })
 }
+
+//Streams & Buffers
+
+  
