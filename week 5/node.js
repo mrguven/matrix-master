@@ -1,92 +1,92 @@
-// let http= require('http');
-// const fs = require('fs');
+let http= require('http');
+const fs = require('fs');
 
 
-// http.createServer(function (req,res)  {
+http.createServer(function (req,res)  {
     
-//     res.writeHead(200,{'Content-Type': 'text/html'});
-//     res.write('erssdasdfsdfdsfldf   ');
-//     res.end('hello world');
+    res.writeHead(200,{'Content-Type': 'text/html'});
+    res.write('erssdasdfsdfdsfldf   ');
+    res.end('hello world');
     
-//     }).listen(8080)
+    }).listen(8080)
 
 
-// //reading file------------
+//reading file------------
 
-// fs.readFile('./index.html', (err,data) => {
+fs.readFile('./index.html', (err,data) => {
 
-// if(err) {
-//     console.log(err);
-// }
+if(err) {
+    console.log(err);
+}
 
-// else {
-//     console.log(data.toString());
-// }
+else {
+    console.log(data.toString());
+}
 
+});
+console.log('last line');
+
+
+//writing file-------------
+
+
+
+// fs.writeFile('./test.txt', 'it is write',()=> {
+// console.log( 'file is written');
 // });
-// console.log('last line');
 
-
-// //writing file-------------
-
-
-
-// // fs.writeFile('./test.txt', 'it is write',()=> {
-// // console.log( 'file is written');
-// // });
-
-// // fs.writeFile('./test1.txt', 'this is test' , ()=> {
-// //     console.log('the file is written');
-// // })
-
-
-
-// //directories------------
-
-
-// if(!fs.existsSync ('./assets'))  {
-
-// fs.mkdir('./assets' , (err)=> {
-//             if(err) {
-//                 console.log(err);
-//             } else {
-//                 console.log('folder created');}
-            
+// fs.writeFile('./test1.txt', 'this is test' , ()=> {
+//     console.log('the file is written');
 // })
-// }else {
-//     fs.rmdir('./assets', (err)=> {
-//         if(err) {
-//             console.log(err);
-//         } else {
-//             console.log('the folder deleted');
-//         }
-//     })
-// }
 
 
-// //deleting file-------------
+
+//directories------------
 
 
-// if(fs.existsSync('./deleteme.txt')) {
-//     fs.unlink('./deleteme.txt', (err)=> {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             console.log('the folder is deleted');
-//         }
-//     })
-// }
+if(!fs.existsSync ('./assets'))  {
 
-// //Streams & Buffers
+fs.mkdir('./assets' , (err)=> {
+            if(err) {
+                console.log(err);
+            } else {
+                console.log('folder created');}
+            
+})
+}else {
+    fs.rmdir('./assets', (err)=> {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log('the folder deleted');
+        }
+    })
+}
 
-// //   const writeStream=fs.createWriteStream('./test3.txt')
+
+//deleting file-------------
+
+
+if(fs.existsSync('./deleteme.txt')) {
+    fs.unlink('./deleteme.txt', (err)=> {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log('the folder is deleted');
+        }
+    })
+}
+
+//Streams & Buffers
+
+//   const writeStream=fs.createWriteStream('./test3.txt')
 
  
-// // writeStream.write('\nhello world\n')
-// // writeStream.write('het het')
+// writeStream.write('\nhello world\n')
+// writeStream.write('het het')
   
 
-// let rs=fs.createReadStream('./test.txt');
-// rs.on('open', ()=> {
-//     console.log('the file is open');
-// })
+let rs=fs.createReadStream('./test.txt');
+rs.on('open', ()=> {
+    console.log('the file is open');
+})
