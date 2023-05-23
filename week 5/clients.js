@@ -11,7 +11,32 @@ let server= http.createServer((req,res)=> {
 
     // to send  the html file to browser of and data, we use first fs. first we read the file and then 
     // we write the data 
-    fs.readFileSync('./index.html', (err,data)=> {
+
+
+
+
+let path = './views';
+switch(req.url) {
+    case '/' :
+    path+='index.html';
+    break;
+    case './about': 
+    path+='about.html';
+    break;
+    default: 
+    path+='404.html';
+    break;
+}
+
+
+
+
+
+
+
+
+
+    fs.readFileSync('./views/index.html', (err,data)=> {
         if(err) {
             console.log(err);
             res.end();
@@ -31,6 +56,8 @@ let server= http.createServer((req,res)=> {
 server.listen(3010,'localhost', ()=> {
     console.log('listining the port 3010');
 });
+
+
 
 
 
