@@ -31,13 +31,13 @@ console.log('last line');
 
 
 
-fs.writeFile('./test.txt', 'it is write',()=> {
-console.log( 'file is written');
-});
+// fs.writeFile('./test.txt', 'it is write',()=> {
+// console.log( 'file is written');
+// });
 
-fs.writeFile('./test1.txt', 'this is test' , ()=> {
-    console.log('the file is written');
-})
+// fs.writeFile('./test1.txt', 'this is test' , ()=> {
+//     console.log('the file is written');
+// })
 
 
 
@@ -85,3 +85,8 @@ if(fs.existsSync('./deleteme.txt')) {
 // writeStream.write('\nhello world\n')
 // writeStream.write('het het')
   
+
+let rs=fs.createReadStream('./test.txt');
+rs.on('open', ()=> {
+    console.log('the file is open');
+})
