@@ -15,34 +15,34 @@ let server= http.createServer((req,res)=> {
 
 
 
-let path = './views';
+let path = './views/';  // we make path and sent to fs readfile. 
 switch(req.url) {
     case '/' :
     path+='index.html';
+    res.statusCode=200;
     break;
-    case './about': 
+    case '/about': 
     path+='about.html';
+    res.statusCode=200;
+    break;
+    case '/about-me': 
+    res.statusCode=301;
+    res.setHeader('Location','/about') // with this method we redirect the page what we want
+    res.end();
     break;
     default: 
     path+='404.html';
+    res.statusCode=404;
     break;
 }
 
-
-
-
-
-
-
-
-
-    fs.readFileSync('./views/index.html', (err,data)=> {
+    fs.readFile(path, (err,data)=> {
         if(err) {
             console.log(err);
             res.end();
         }
         else {
-            //res.write(data); // if we send only one data we use end method
+           // res.write(data); // if we send only one data we use end method
             res.end(data);
         }
     })
