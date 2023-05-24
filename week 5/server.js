@@ -27,11 +27,22 @@ app.get('/one', (req,res)=> {
 
 
 app.get('/two',(req,res)=> {
-res.type('text/html');
+res.type('text/html');    //we do not need to write res.type in express
 res.write('this is second Hello')
 },(req,res)=> {
     res.status(200).end('this is second world')   /// in this code, we did not get result of end(), chrome is always working.
 })
 
 
+app.get('/about', (req,res)=> {
+    res.sendFile('./views/about.html', {root:__dirname})
+});
+
+app.get('/about-us', (req,res)=> {
+    res.redirect('/about');
+});
+
+app.use((req,res)=> {
+    res.status(404).sendFile('./views/404.html', {root:__dirname})
+})
 

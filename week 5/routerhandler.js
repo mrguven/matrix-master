@@ -9,7 +9,7 @@ const router=express.Router();
 //     res.send('I got your data')
 // })
 
-
+ 
 const miniapp=express.Router();
 
 miniapp.get('/home',(req,res,next)=> {
