@@ -2,6 +2,15 @@ const express= require('express');
 
 const app= express(); 
 
+
+
+//register view engine
+app.set('view engine',ejs);   // ask about this topic. what is template, what for used it. why?
+ 
+//app.set('views', 'myviews');
+
+
+
 app.listen(8050, (err)=> {
         if (err) {
             console.log(err);
@@ -45,4 +54,6 @@ app.get('/about-us', (req,res)=> {
 app.use((req,res)=> {
     res.status(404).sendFile('./views/404.html', {root:__dirname})
 })
+
+
 
