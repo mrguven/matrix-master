@@ -17,10 +17,10 @@
 <div>
     <% if(mascots.length>0) { %>
 
-        <% mascosts.forEach((mascosts) => {  %>
-             <h3><%= mascosts.name %></h3>
-             <h3><%= mascosts.organization %></h3>
-             <h3><%= mascosts.birth_year %></h3>
+        <% mascots.forEach((mascost) => {  %>
+             <h3><%= mascost.name %> organization name <%= mascost.organization %> and date <%= mascost.birth_year %></h3>
+             
+             
              <% })%>
         
         

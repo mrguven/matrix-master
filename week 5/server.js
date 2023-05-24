@@ -23,7 +23,7 @@ app.listen(8050, (err)=> {
 
 app.get('/', (req,res,)=> {
 
-    const mascots = [
+    let mascots = [
         { name: 'Sammy', organization: "DigitalOcean", birth_year: 2012},
         { name: 'Tux', organization: "Linux", birth_year: 1996},
         { name: 'Moby Dock', organization: "Docker", birth_year: 2013}
@@ -31,7 +31,8 @@ app.get('/', (req,res,)=> {
     
     
 
-   res.render('index1', {title:'Home', mascots}); // this is ejs method. we can render and send the page to client side easly.
+   res.render('index1', {title:'Home',mascots}); 
+   // this is ejs method. we can render and send the page to client side easly.
    //and second parameter is an object and we can make changing inside the webpage via ejs.
    console.log('this is home page');
     
