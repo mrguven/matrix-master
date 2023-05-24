@@ -2,7 +2,14 @@ const express= require('express');
 
 const app= express(); 
 
+app.listen(8050, (err)=> {
+    if (err) {
+        console.log(err);
 
+    } else {
+        console.log('connected succesfully');
+    }
+})
 
 //register view engine
 app.set('view engine','ejs');   // ask about this topic. what is template, what for used it. why?
@@ -11,14 +18,7 @@ app.set('view engine','ejs');   // ask about this topic. what is template, what 
 
 
 
-app.listen(8050, (err)=> {
-        if (err) {
-            console.log(err);
 
-        } else {
-            console.log('connected succesfully');
-        }
-})
 
 
 app.get('/', (req,res,)=> {
@@ -57,8 +57,8 @@ res.status(200).render('two');
 
 
 app.get('/about', (req,res)=> {
-    res.sendFile('./views/about.html', {root:__dirname})
-
+    //res.sendFile('./views/about.html', {root:__dirname}) // we can use render instead of sendfile
+ res.status(200).render('about')
     
 });
 
