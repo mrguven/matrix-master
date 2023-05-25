@@ -6,6 +6,10 @@ const rout=require('./config/route.js')
 
 
 
+
+
+app.use(express.static('public')) // with this method we can make  img and css vs. files  public and reachable.
+// ejs file search automaticly css file in publuck folder
 app.set('view engine', 'ejs');
 app.use(rout); 
 app.listen(8008, (req,res)=> {
@@ -16,26 +20,25 @@ app.listen(8008, (req,res)=> {
  // this is used to route the request route.js. we do all task in that file.
 
 
-app.use((req,res,next)=> {
+// app.use((req,res,next)=> {  // we can get information of request.
 
-    console.log('new request made');
-    console.log('host: ', req.hostname);
-    console.log('path ', req.path);
-    console.log('method ', req.method);
-    next();
+//     console.log('new request made');
+//     console.log('host: ', req.hostname);
+//     console.log('path ', req.path);
+//     console.log('method ', req.method);
+//     next();
 
-})
+// })
 
-app.use(express.static('public')) // with this method we can make  img and css vs. files  public and reachable.
-// ejs file search automaticly css file in publuck folder
-app.use((req,res,next)=> {
 
-    console.log('this is next middleware');
+// app.use((req,res,next)=> {  // I did not understand why we use this
+
+//     console.log('this is next middleware');
     
     
-    next();
+//     next();
 
-})
+// })
 
 
 // app.get('/', (req,res)=> {
