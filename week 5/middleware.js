@@ -2,15 +2,20 @@ const express = require('express');
 const fs= require('fs')
 
 const app= express();
-const router=require('./config/route.js')
+const rout=require('./config/route.js')
 
+
+
+app.set('view engine', 'ejs');
+app.use(rout); 
 app.listen(8008, (req,res)=> {
     console.log('the port is working')
 })
 
-app.set('view engine', 'ejs');
-app.use('/',router);  // this is used to route the request route.js. we do all task in that file.
-app.use('/users',router);
+
+ // this is used to route the request route.js. we do all task in that file.
+
+
 app.use((req,res,next)=> {
 
     console.log('new request made');

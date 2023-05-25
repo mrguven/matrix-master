@@ -1,6 +1,6 @@
 const express=require('express')
 const router=express.Router();
-
+const taskController = require('../controller/taskController')
 const fs=require('fs');
 
 // router.use((req, res, next) => {
@@ -22,32 +22,9 @@ const fs=require('fs');
         
     
     
-router.get('/',(req,res)=> {
+router.get('/',taskController.homePage);
 
-
-    let mascots = [
-                { name: 'Sammy', organization: "DigitalOcean", birth_year: 2012},
-                { name: 'Tux', organization: "Linux", birth_year: 1996},
-                { name: 'Moby Dock', organization: "Docker", birth_year: 2013}
-              ];
-          
-
-              fs.readFile('data.json',(err,data)=> {
-                if(err) {
-                    res.render('./404.html')
-                }
-                else{
-                let dataPool = JSON.parse(data);
-                res.render('index2.ejs', {title: 'home page', mascots,dataPool})
-                }
-
-
-            
-   
-})
-
-})
-router.get('/users', (req,res)=> {
+router.get('/users', (req,res)=> {   // with this way, we get the data from json file.
 console.log('read it?');
     fs.readFile('data.json',(err,data)=> {
         if(err) {
@@ -66,6 +43,10 @@ console.log('read it?');
     })
 
 
+    router.get('/register', (req,res)=> {
+
+        res.render('register')
+    })
 
 
 module.exports=router;
