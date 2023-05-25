@@ -1,0 +1,212 @@
+
+/* * {
+    margin: 4;
+    padding: 0;
+}
+*/
+
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6em;
+    margin: 0;
+
+
+}
+
+h1 {
+    color: rgb(102, 102, 175);
+    text-align: center;
+    background-color: bisque;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+a:visited{
+    color: black;
+}
+    
+.container {
+    width: 80%;
+    margin: auto;
+
+}
+
+.button [ type= "submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+
+}
+
+.botton:hover {
+    background-color: lavender;
+}
+.clr {
+    clear: both;
+}
+
+.box-1 {
+    background-color: rgb(233, 193, 193);
+    color: rgb(12, 58, 59);
+    border: 5px red solid;
+    border-bottom-right-radius: 20px;
+    border-top-style: dotted;
+    padding: 20px;
+    border-width: 3px;
+    border-bottom-width: 10px;
+    margin: 20px;
+}
+
+.box-2 h1 {
+    font-family: Thoma;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    word-spacing: 1em;
+
+}
+
+.box-2 {
+    border: 3px dotted #ccc;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.categories {
+    border: 1px #ccc solid;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.categories h2{
+    text-align: center;
+}
+
+.categories ul{
+    padding: 0;
+    padding-left: 20px;
+    list-style: square;
+    list-style: none;
+}
+
+.categories li {
+    padding-bottom: 6px;
+    border-bottom: dotted 1px #333;
+    list-style-image: url('download(1).jpg');
+    
+}
+
+.my-form {
+    padding: 20px;
+
+}
+
+.my-form .form-group {
+    padding-bottom: 15px;
+
+}
+
+.my-form label {
+    display: block;
+}
+
+.my-form input [type="text"], .my-form textarea {
+    padding: 8px;
+    width: 100%;
+}
+
+.block {
+    float: left;
+    width: 33.3%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+
+#main-block {
+    float: left;
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#side-bar {
+    float: right;
+    width: 30%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.p-box {
+    width: 800px;
+    height: 500px;
+    border: 1px solid #000;
+    margin-top: 30px;
+    position: relative;
+    clear: both;
+    margin: 10px;
+    background-image: url('bground.jpg');
+    background-size: cover;
+    background-position: center 20px;
+
+
+}
+
+.p-box h1 {
+
+position: absolute;
+top: 100px;
+left: 200px;
+
+}
+
+.p-box h2 {
+    position: absolute;
+    bottom: 40px;
+    right: 100px;
+}
+
+.fix-mebutton { 
+    position: fixed;
+    top: 400px;
+    background-color: aqua;
+
+}
+
+.my-list li:first-child {
+    background: red;
+
+}
+
+.my-list li:last-child {
+    background: blue;
+}
+
+.my-list li:nth-child(5) {
+    background: yellow;
+}
+
+.my-list li:nth-child(even) {
+    background: grey;
+}

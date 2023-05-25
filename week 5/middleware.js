@@ -18,6 +18,8 @@ app.use((req,res,next)=> {
 
 })
 
+app.use(express.static('public')) // with this method we can make  img and css vs. files  public and reachable.
+// ejs file search automaticly css file in publuck folder
 app.use((req,res,next)=> {
 
     console.log('this is next middleware');
@@ -30,6 +32,11 @@ app.use((req,res,next)=> {
 
 app.get('/', (req,res)=> {
 
+    let mascots = [
+        { name: 'Sammy', organization: "DigitalOcean", birth_year: 2012},
+        { name: 'Tux', organization: "Linux", birth_year: 1996},
+        { name: 'Moby Dock', organization: "Docker", birth_year: 2013}
+      ];
   
-    res.render('index2.ejs')
+    res.render('index2.ejs', {title: 'home page', mascots})
 })
