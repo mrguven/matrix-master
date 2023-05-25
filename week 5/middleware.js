@@ -2,7 +2,7 @@ const express = require('express');
 const fs= require('fs')
 
 const app= express();
-const router=require('./route.js')
+const router=require('./config/route.js')
 
 app.listen(8008, (req,res)=> {
     console.log('the port is working')
