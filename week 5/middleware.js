@@ -6,7 +6,7 @@ const app= express();
 const rout=require('./config/route.js')
 
 const connectDB=require('./config/db.js')
-
+const Blog = require('./model/goalModel')
 const port = process.env.PORT || 5000;
 
 app.use(express.json()); // this is : expect request data to be sent in json format.
@@ -28,9 +28,17 @@ app.listen(port, (req,res)=> {
 connectDB();
 
 
+run()
 
+async function run(){
+    const blog= new Blog({
+        firstname:'raug',
+        lastname:'tere'
+    })
 
-
+    await blog.save();
+    console.log(blog);
+}
 
 
 

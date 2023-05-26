@@ -2,7 +2,7 @@ const fs=require('fs');
 
 const asyncHandler= require('express-async-handler')
 
-const Goal= require('../model/goalModel')
+
 
 
 
@@ -38,6 +38,12 @@ const goals =await Goal.find();
 res.status(200).json(goals)
 
 })
+
+
+
+
+
+
 
 
 module.exports= {
