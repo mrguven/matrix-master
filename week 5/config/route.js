@@ -1,7 +1,8 @@
 const express=require('express')
 const router=express.Router();
-const taskController = require('../controller/taskController')
+//const taskController = require('../controller/taskController')  // we can use other method
 const fs=require('fs');
+const {homePage}= require('../controller/taskController');
 
 // router.use((req, res, next) => {
 //     console.log('Time: ', Date.now())
@@ -21,8 +22,8 @@ const fs=require('fs');
     
         
     
-    
-router.get('/',taskController.homePage);
+        router.get('/', homePage);  
+//router.get('/',taskController.homePage); // because of above  method we do not need to use this method.
 
 router.get('/users', (req,res)=> {   // with this way, we get the data from json file.
 console.log('read it?');
@@ -38,9 +39,11 @@ console.log('read it?');
         }
     });
     
-        
     
     })
+
+
+    router.get('/getdata', getGoals)
 
 
     router.get('/register', (req,res)=> {
