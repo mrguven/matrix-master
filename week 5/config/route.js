@@ -43,7 +43,7 @@ console.log('read it?');
     })
 
 
-    router.get('/getdata', getGoals)
+   // router.get('/getdata', getGoals)
 
 
     router.get('/register', (req,res)=> {
