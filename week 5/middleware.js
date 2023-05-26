@@ -1,14 +1,16 @@
 const express = require('express');
 const dotenv= require('dotenv').config();
-//const mangoose=require('mangoose')
-const MongoClient = require('mongodb').MongoClient;
-const { Schema } = require("mongoose")
+
+
 const app= express();
 const rout=require('./config/route.js')
 
-
+const connectDB=require('./config/db.js')
 
 const port = process.env.PORT || 5000;
+
+app.use(express.json()); // this is : expect request data to be sent in json format.
+app.use(express.urlencoded());  // this is to get info in the url, (I am not sure)
 
 app.use(express.static('public')) // with this method we can make  img and css vs. files  public and reachable.
 // ejs file search automaticly css file in publuck folder
@@ -21,52 +23,9 @@ app.listen(port, (req,res)=> {
 
 //DotEnv: it contains sensetive data, and it is object. we can reach 'precess.env.'keys''
 
-var url = "mongodb+srv://mrguven:23Mehmet.@cluster0.cyitikx.mongodb.net/?retryWrites=true&w=majority";
 
 
-
-MongoClient.connect(url, function(err, db) { 
-  if (err) throw err;
-  db.collection('')
-  console.log("Database created!");
-  db.close();
-});
-
-
-
-const PersonSchema = new Schema({
-    name: {
-      type: String,
-      required: true,
-      default: "Unknown"
-    },
-    age: {
-      type: Number,
-      min: 18,
-      max: 80,
-      required: true
-    },
-    isSingle: {
-      type: Boolean
-    },
-    birthday: {
-      type: Date,
-      required: true
-    },
-    description: { type: Buffer }
-  })
-
-
-
-
-
-
-
-
-
-
-
-
+connectDB();
 
 
 

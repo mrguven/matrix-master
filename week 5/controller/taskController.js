@@ -1,5 +1,12 @@
 const fs=require('fs');
-const homePage=  (req,res)=> {
+
+const asyncHandler= require('express-async-handler')
+
+const Goal= require('../model/goalModel')
+
+
+
+const homePage= asyncHandler( async  (req,res)=> {  // we use async, because we connect database. they  must run async
 
 
     let mascots = [
@@ -11,7 +18,7 @@ const homePage=  (req,res)=> {
 
               fs.readFile('data.json',(err,data)=> {
                 if(err) {
-                    res.render('./404.html')
+                    res.resnder('./404.html')
                 }
                 else{
                 let dataPool = JSON.parse(data);
@@ -21,10 +28,18 @@ const homePage=  (req,res)=> {
 
               })
    
-}
+})
 
+
+
+const getGoals= asyncHandler( async(req,res)=> {
+
+const goals =await Goal.find();
+res.status(200).json(goals)
+
+})
 
 
 module.exports= {
-    homePage
+    homePage,getdata
 }
