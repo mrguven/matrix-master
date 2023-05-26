@@ -41,5 +41,5 @@ res.status(200).json(goals)
 
 
 module.exports= {
-    homePage,getdata
+    homePage, getGoals
 }

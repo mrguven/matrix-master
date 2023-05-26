@@ -2,7 +2,7 @@ const express=require('express')
 const router=express.Router();
 //const taskController = require('../controller/taskController')  // we can use other method
 const fs=require('fs');
-const {homePage}= require('../controller/taskController');
+const {homePage,getGoals}= require('../controller/taskController');
 
 // router.use((req, res, next) => {
 //     console.log('Time: ', Date.now())

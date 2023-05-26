@@ -17,6 +17,12 @@ const connectDB= async()=> {
 
 }
 
+mongoose.connection.once('open', ()=> {
+    console.log('connection succussfully');
+}).on('err',(error)=> {
+    console.log('conncection errror:'.error);
+})
+
 module.exports=connectDB
 
 
