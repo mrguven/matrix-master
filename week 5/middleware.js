@@ -28,23 +28,23 @@ app.listen(port, (req,res)=> {
 connectDB();
 
 
-run()
+// run()
 
-async function run(){
+// async function run(){
 
-    try {
-        const blog= new Blog({
-            firstname:'raug',
-            lastname:'tere'
-        })
+//     try {
+//         const blog= new Blog({
+//             firstname:'raug',
+//             lastname:'tere'
+//         })
     
-        await blog.save();
-        console.log(blog);
-    }
-     catch (error) {
-        (error)=> console.log(error.message);
-    }
-}
+//         await blog.save();
+//         console.log(blog);
+//     }
+//      catch (error) {
+//         (error)=> console.log(error.message);
+//     }
+// }
     
 
 

@@ -1,4 +1,5 @@
 
+const comment = require('../model/commentModel')
 
 const asyncHandler= require('express-async-handler')
 
@@ -22,10 +23,24 @@ const getCommentPage = (req,res) => {
 }
 
 
+const sendComment = (req,res)=> {
+
+    const commentBody= req.query.comment;
+
+
+    
+    console.log(commentBody);
+// commentBody=new comment()
+
+
+}
+
+
 
 
 module.exports={
     getHomePage,
     getRegisterPage,
-    getCommentPage
+    getCommentPage,
+    sendComment
 }
