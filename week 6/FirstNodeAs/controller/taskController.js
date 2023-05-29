@@ -16,11 +16,16 @@ const getRegisterPage = (req,res) => {
     res.status(200).render('register.ejs')
 }
 
+const getCommentPage = (req,res) => {
+
+    res.status(200).render('comment.ejs')
+}
 
 
 
 
 module.exports={
     getHomePage,
-    getRegisterPage
+    getRegisterPage,
+    getCommentPage
 }

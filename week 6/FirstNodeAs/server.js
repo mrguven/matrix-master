@@ -9,7 +9,7 @@ app.set('view engine','ejs')
 
 app.use(rout);
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({extended:false}));
 app.use(express.static('public'))
 app.listen(port, (req,res)=> {
   
