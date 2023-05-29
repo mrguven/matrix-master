@@ -23,19 +23,33 @@ const getCommentPage = (req,res) => {
 }
 
 
-const sendComment = (req,res)=> {
+const sendComment = (req,res,saveData)=> {
 
     const commentBody= req.query.comment;
 
 
-    
-    console.log(commentBody);
-// commentBody=new comment()
 
+    console.log(commentBody);
+
+//      async function saveData(){
+//     try {
+//                 const blog= new Blog({
+//                     name:commentBody
+//                 })
+            
+//                 await blog.save();
+//                 console.log(blog);
+//             }
+//              catch (error) {
+//                 (error)=> console.log(error.message);
+//             }
+
+
+
+// }
+// saveData();
 
 }
-
-
 
 
 module.exports={
