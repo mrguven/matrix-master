@@ -31,14 +31,21 @@ connectDB();
 run()
 
 async function run(){
-    const blog= new Blog({
-        firstname:'raug',
-        lastname:'tere'
-    })
 
-    await blog.save();
-    console.log(blog);
+    try {
+        const blog= new Blog({
+            firstname:'raug',
+            lastname:'tere'
+        })
+    
+        await blog.save();
+        console.log(blog);
+    }
+     catch (error) {
+        (error)=> console.log(error.message);
+    }
 }
+    
 
 
 

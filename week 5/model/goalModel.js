@@ -9,15 +9,23 @@ const goalSchema= mongoose.Schema({
     },
     lastname:{
         type:String,
-        required:true
+        required:true,
+        minLength: 1
     },
     // email:{
     //     type:String,
     //     required:true
+    //     lowercase:true
     // },
     // phone:{
     //     type:String,
-    //     required:true
+    //     required:true ,
+    //    ///  min and max is restrict to value of data
+    //  min:5
+    //      validate: {
+    //             validator: v => %2===0,      // with validate, we can make condition for date
+    //             message: props => `${props.value} is not an even number`
+    // }
     // },
     // address:{
     //     type:String,
