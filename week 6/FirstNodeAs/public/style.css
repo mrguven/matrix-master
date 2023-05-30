@@ -1,0 +1,22 @@
+#userName {
+    text-shadow: 4px;
+}
+
+#name {
+font-style: italic;
+color: rgb(123, 123, 197);
+}
+
+#border {
+    border: 2px;
+    border-style: groove;
+}
+
+#commentBorder {
+    border: 2px;
+    border-style: groove;
+}
+
+#commentBorder:hover {
+    background-color: bisque;
+}

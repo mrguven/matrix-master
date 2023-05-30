@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comment Page</title>
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -41,10 +41,14 @@
 
     
     <% Comment.forEach(function (practice) { %>
-        <ul>
-            <h2><%= practice.userName %></h2>
-       <li>  <%= practice.name %> </li>
-    </ul>
+        <div id="border">
+        
+            <div id="commentBorder">
+                     <h2 id="userName"><%= practice.userName %></h2>
+                  <h4>  id="name">  <%= practice.name %> </h4>
+             </div>
+             <a href=""></a>
+</div>
     <% }) %>
 
 
