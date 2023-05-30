@@ -18,7 +18,7 @@ const dbConnection =async()=> {
 }
 
 mongoose.connection.once('open', ()=> {
-    console.log('connection succussfully');
+    console.log('connection with database is succussful');
 }).on('err',(error)=> {
     console.log('conncection errror:'.error);
 })

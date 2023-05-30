@@ -12,7 +12,7 @@ app.set('view engine','ejs')
 app.use(express.static('public'))
 app.use(rout);
 
-dbConnection();
+ dbConnection();
 
 app.listen(port, (req,res)=> {
   

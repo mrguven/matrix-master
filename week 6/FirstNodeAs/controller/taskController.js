@@ -8,8 +8,6 @@ const asyncHandler= require('express-async-handler')
 const getHomePage = (req,res)=> {
 
     res.status(200).render('index.ejs')
-
-
 }
 
 
@@ -29,9 +27,7 @@ const name=req.body.name
 console.log(userNm);
 console.log(name);
     
-    
-    
-     const blog= new Comment({
+        const blog= new Comment({
                  userName :userNm,
                     name:name
                 })
@@ -43,23 +39,10 @@ console.log(name);
                
                 
                 console.log('did this function run');
-
-                
-
-
-                
-                
-            }
-              
-                
-            
-
-
-         const getCommentPage =    (req,res) => {
-
-
-                Comment.find().sort({ createdAt: -1 })
-                            .then((data)=> {res.render('comment.ejs', {Comment: data})})
+         }
+                  const getCommentPage =    (req,res) => {
+        Comment.find().sort({ createdAt: -1 })
+                            .then((data)=> {res.render('comment.ejs', {Comment: data})}) // this is not good. Maybe it can be andere solution. I made two times render same page in this function.
                             .catch((err)=>console.log(err))
                            
             }
