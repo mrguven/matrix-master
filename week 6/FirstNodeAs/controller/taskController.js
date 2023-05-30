@@ -58,7 +58,7 @@ console.log(name);
          const getCommentPage =    (req,res) => {
 
 
-                Comment.find()
+                Comment.find().sort({ createdAt: -1 })
                             .then((data)=> {res.render('comment.ejs', {Comment: data})})
                             .catch((err)=>console.log(err))
                            
