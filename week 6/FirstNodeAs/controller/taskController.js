@@ -50,7 +50,13 @@ console.log(name);
 
 
 
-
+const getFullArticle =(req,res)=> {
+            Comment.findById(req.params.id).then((result)=> {
+                res.redirect('fullArticle', {Comment:result})
+            }).catch((err)=>{
+                console.log(err);
+            })
+}
 
 
 
@@ -61,5 +67,6 @@ module.exports={
     getHomePage,
     getRegisterPage,
     getCommentPage,
-    sendComment
+    sendComment,
+    getFullArticle
 }
