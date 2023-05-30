@@ -1,5 +1,6 @@
 
-const comment = require('../model/commentModel')
+const express=require('express')
+const Comment = require('../model/commentModel')
 
 const asyncHandler= require('express-async-handler')
 
@@ -17,39 +18,60 @@ const getRegisterPage = (req,res) => {
     res.status(200).render('register.ejs')
 }
 
-const getCommentPage = (req,res) => {
-
-    res.status(200).render('comment.ejs')
-}
-
-
-const sendComment = (req,res,saveData)=> {
-
-    const commentBody= req.query.comment;
 
 
 
-    console.log(commentBody);
+const sendComment = (req,res)=> {
 
-//      async function saveData(){
-//     try {
-//                 const blog= new Blog({
-//                     name:commentBody
-//                 })
+    const userNm= req.body.userName;
+const name=req.body.name
+
+console.log(userNm);
+console.log(name);
+    
+    
+    
+     const blog= new Comment({
+                 userName :userNm,
+                    name:name
+                })
+            console.log(req.body.userName);
+            console.log(req.body.name);
+                  blog.save().then(res.status(201).redirect('comment'))
+                 .catch((error)=> console.log(error.message));
+                console.log(blog);
+               
+                
+                console.log('did this function run');
+
+                
+
+
+                
+                
+            }
+              
+                
             
-//                 await blog.save();
-//                 console.log(blog);
-//             }
-//              catch (error) {
-//                 (error)=> console.log(error.message);
-//             }
+
+
+         const getCommentPage =    (req,res) => {
+
+
+                Comment.find()
+                            .then((data)=> {res.render('comment.ejs', {Comment: data})})
+                            .catch((err)=>console.log(err))
+                           
+            }
 
 
 
-// }
-// saveData();
 
-}
+
+
+
+
+
 
 
 module.exports={

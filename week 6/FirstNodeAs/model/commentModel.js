@@ -1,8 +1,15 @@
 const mongoose = require('mongoose');
 
 const commentSchema =mongoose.Schema({
+    userName:{
+        type:String,
+    
+    },
+    name:{
+    type:String,
+    required:true
+    }
 
-name:String
 
 
 }, {timestamps:true})

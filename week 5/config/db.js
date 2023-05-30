@@ -38,8 +38,8 @@ module.exports=connectDB
 
 
 
-// const MongoClient = require('mongodb').MongoClient;
-// const { Schema } = require("mongoose")
+// // const MongoClient = require('mongodb').MongoClient;
+// // const { Schema } = require("mongoose")
 
 
 
@@ -47,36 +47,36 @@ module.exports=connectDB
 
 
 
-// MongoClient.connect(url, function(err, db) { 
-//     if (err) throw err;
-//     db.collection('')
-//     console.log("Database created!");
-//     db.close();
-//   });
+// // MongoClient.connect(url, function(err, db) { 
+// //     if (err) throw err;
+// //     db.collection('')
+// //     console.log("Database created!");
+// //     db.close();
+// //   });
   
   
   
-//   const PersonSchema = new Schema({
-//       name: {
-//         type: String,
-//         required: true,
-//         default: "Unknown"
-//       },
-//       age: {
-//         type: Number,
-//         min: 18,
-//         max: 80,
-//         required: true
-//       },
-//       isSingle: {
-//         type: Boolean
-//       },
-//       birthday: {
-//         type: Date,
-//         required: true
-//       },
-//       description: { type: Buffer }
-//     })
+// //   const PersonSchema = new Schema({
+// //       name: {
+// //         type: String,
+// //         required: true,
+// //         default: "Unknown"
+// //       },
+// //       age: {
+// //         type: Number,
+// //         min: 18,
+// //         max: 80,
+// //         required: true
+// //       },
+// //       isSingle: {
+// //         type: Boolean
+// //       },
+// //       birthday: {
+// //         type: Date,
+// //         required: true
+// //       },
+// //       description: { type: Buffer }
+// //     })
   
   
   
