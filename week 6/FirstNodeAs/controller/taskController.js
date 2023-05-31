@@ -66,7 +66,7 @@ const deleteComment = (req,res)=> {
 
 
     Comment.findByIdAndDelete(req.params.id)
-    .then(()=>res.redirect('/')).catch(()=>res.redirect('404.html'))
+    .then(()=>res.redirect('/comment')).catch(()=>res.redirect('404.html'))
     
 }
 
@@ -76,9 +76,16 @@ const addCommentPage = (req,res)=> {
 }
 
 const getBackPage =(req,res)=> {
-    res.render('back')
+    res.redirect('/comment')
 }
 
+
+const getEditComment = (req,res)=> {
+    
+    Comment.findById(req.params.id).then()
+
+    res.redirect('/addComment');
+}
 
 module.exports={
     getHomePage,
@@ -86,5 +93,5 @@ module.exports={
     getCommentPage,
     sendComment,
     getFullArticle,
-    deleteComment,addCommentPage,getBackPage
+    deleteComment,addCommentPage,getBackPage,getEditComment
 }
