@@ -33,14 +33,17 @@ console.log(name);
                 })
             console.log(req.body.userName);
             console.log(req.body.name);
-                  blog.save().then(res.status(201).redirect('comment'))
-                 .catch((error)=> console.log(error.message));
+                  blog.save().then(()=>{res.status(201).redirect('comment')})
+                 .catch(()=> redirect('404.html'));
                 console.log(blog);
                
                 
                 console.log('did this function run');
          }
-                  const getCommentPage =    (req,res) => {
+                 
+         
+         
+         const getCommentPage =    (req,res) => {
         Comment.find().sort({ createdAt: -1 })
                             .then((data)=> {res.render('comment.ejs', {Comment: data})}) // this is not good. Maybe it can be andere solution. I made two times render same page in this function.
                             .catch((err)=>console.log(err))
@@ -59,8 +62,22 @@ const getFullArticle =(req,res)=> {
 }
 
 
+const deleteComment = (req,res)=> {
 
 
+    Comment.findByIdAndDelete(req.params.id)
+    .then(()=>res.redirect('/')).catch(()=>res.redirect('404.html'))
+    
+}
+
+const addCommentPage = (req,res)=> {
+
+    res.render('userComment')
+}
+
+const getBackPage =(req,res)=> {
+    res.render('back')
+}
 
 
 module.exports={
@@ -68,5 +85,6 @@ module.exports={
     getRegisterPage,
     getCommentPage,
     sendComment,
-    getFullArticle
+    getFullArticle,
+    deleteComment,addCommentPage,getBackPage
 }

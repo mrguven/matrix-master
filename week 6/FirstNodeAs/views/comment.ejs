@@ -11,21 +11,11 @@
 </head>
 <body>
 
-        <%- include('./partials/nav.ejs') -%>
-  
+       
 
-<form action="/sendComment" method="post">
-        <h2>Post a message</h2>
-        <div>
-            <h3>User Name</h3>
-        <input type="text" name="userName" id="userName" style="margin-bottom:15px ;">
-    </div>
-        <textarea type="text" name='name' rows=9 minlength=25
-              placeholder="write comment"  style="width: 20%;"    ></textarea>
+    <%- include('./partials/nav.ejs') -%>
         
-        <button type="submit"  >Post a message</button>
-    
-    </form>
+
 
 
     <!-- <%  for(let i=0;i<Comment.length;i++) { %>
@@ -44,8 +34,8 @@
         <div id="border">
         
             <div id="commentBorder">
-                     <h2 id="userName"><%= practice.userName %></h2>
-                  <h4  id="name">  <%= practice.name.slice(0,85) %> </h4>
+                     <h2 id="userName"> <b>Title:</b> <%= practice.userName %></h2>
+                  <h4  id="name">  <b>Comment:</b> <%= practice.name.slice(0,85) %>...... </h4>
              </div>
              <a href="/fullarticle/<%= practice._id %>">see more...</a>
 </div>

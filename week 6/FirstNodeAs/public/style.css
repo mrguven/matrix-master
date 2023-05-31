@@ -8,8 +8,9 @@ color: rgb(123, 123, 197);
 }
 
 #border {
-    border: 2px;
-    border-style: groove;
+   
+    margin: 10px;
+    width: 70%;
 }
 
 #commentBorder {

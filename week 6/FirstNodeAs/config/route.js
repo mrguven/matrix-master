@@ -4,7 +4,8 @@ const router=express.Router();
 
 const {getHomePage,getRegisterPage,
     getCommentPage,sendComment,
-    getFullArticle}= require('../controller/taskController')
+    getFullArticle,deleteComment,addCommentPage,
+    getBackPage}= require('../controller/taskController')
 
 
 router.get('/', getHomePage)
@@ -16,6 +17,15 @@ router.get('/comment', getCommentPage)
 router.post('/sendComment', sendComment)
 
 router.get('/fullarticle/:id', getFullArticle)
+
+
+
+router.post('/deleteUser/:id', deleteComment)
+
+router.get('/addComment', addCommentPage)
+
+router.get('/back', getBackPage)
+
 
 
 

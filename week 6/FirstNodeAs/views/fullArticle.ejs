@@ -7,7 +7,7 @@
     <title>fullarticle</title>
 </head>
 <body>
-    
+    <%- include('./partials/nav.ejs') -%>
    
         <div id="border">
         
@@ -16,7 +16,13 @@
                   <h4  id="name">  <%= Comment.name %> </h4>
              </div>
             
-</div>
+        </div>
+
+        <form action="/deleteUser/<%=Comment._id%>" method="post">
+
+            <button>delete Post</button>
+
+        </form>
     
 
 
