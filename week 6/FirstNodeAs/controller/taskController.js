@@ -22,20 +22,18 @@ const getRegisterPage = (req,res) => {
 
 const sendComment = (req,res)=> {
 
-    const title1= req.body.title;
-const post1=req.body.post
+//     const title1= req.body.title;
+// const post1=req.body.post
 
-console.log(title1);
-console.log(post1);
+// console.log(title1);
+// console.log(post1);
     
-        const blog= new Comment({
-                 title :title1,
-                    post:post1
-                })
+        const blog= new Comment(req.body
+                )
             console.log(req.body.title);
             console.log(req.body.post);
                   blog.save().then(()=>{res.status(201).redirect('comment')})
-                 .catch(()=> redirect('404.html'));
+                 .catch(()=> res.send('you should write more than 25'));
                 console.log(blog);
                
                 
