@@ -1,8 +1,9 @@
 
 const express=require('express')
-const Comment = require('../model/commentModel')
+const {Comment,subComment} = require('../model/commentModel')
 
 const asyncHandler= require('express-async-handler')
+const { round } = require('lodash')
 
 
 const getHomePage = (req,res)=> {
@@ -21,18 +22,18 @@ const getRegisterPage = (req,res) => {
 
 const sendComment = (req,res)=> {
 
-    const userNm= req.body.userName;
-const name=req.body.name
+    const title1= req.body.title;
+const post1=req.body.post
 
-console.log(userNm);
-console.log(name);
+console.log(title1);
+console.log(post1);
     
         const blog= new Comment({
-                 userName :userNm,
-                    name:name
+                 title :title1,
+                    post:post1
                 })
-            console.log(req.body.userName);
-            console.log(req.body.name);
+            console.log(req.body.title);
+            console.log(req.body.post);
                   blog.save().then(()=>{res.status(201).redirect('comment')})
                  .catch(()=> redirect('404.html'));
                 console.log(blog);
@@ -45,9 +46,21 @@ console.log(name);
          
          const getCommentPage =    (req,res) => {
         Comment.find().sort({ createdAt: -1 })
-                            .then((data)=> {res.render('comment.ejs', {Comment: data})}) // this is not good. Maybe it can be andere solution. I made two times render same page in this function.
+                            .then((data)=> {res.render('comment.ejs', {blog: data})}) // this is not good. Maybe it can be andere solution. I made two times render same page in this function.
                             .catch((err)=>console.log(err))
                            
+
+                           
+
+            }
+
+            const getSubPost=(req,res)=>{
+                subComment.find().sort({ createdAt: -1 })
+                .then((data)=> {res.render('comment', {subblog: data})}) 
+                .catch((err)=>console.log(err))
+               
+            
+                
             }
 
 
@@ -55,7 +68,7 @@ console.log(name);
 
 const getFullArticle =(req,res)=> {
             Comment.findById(req.params.id).then((result)=> {
-                res.render('fullArticle', {Comment:result})
+                res.render('fullArticle', {blog:result})
             }).catch((err)=>{
                 console.log(err);
             })
@@ -82,10 +95,45 @@ const getBackPage =(req,res)=> {
 
 const getEditComment = (req,res)=> {
     
-    Comment.findById(req.params.id).then()
-
-    res.redirect('/addComment');
+    Comment.findById(req.params.id).then((result)=> {
+        res.render('editedComment', {blog:result})
+    }).catch((err)=>{
+        console.log(err);
+    })
 }
+
+const updateComment=(req,res)=> {
+    Comment.findByIdAndUpdate(req.params.id,req.body,{new: true})
+    .then((result)=> res.render('fullarticle', {blog:result})).catch(()=> res.render('404'))
+
+}
+
+
+const makeCommentPage= (req,res)=> {
+    res.status(200).render('makeSubCommentPage')
+}
+
+const saveSubCom=(req,res)=> {
+
+    const subUserName= req.body.title;
+const subUserPost=req.body.post
+
+
+    
+        const subblog= new subComment({
+                 title :subUserName,
+                    post:subUserPost
+                })
+            console.log(req.body.title);
+            console.log(req.body.post);
+                  subblog.save().then(()=>{res.status(201).redirect('/comment')})
+                 .catch(()=> res.render('404'));
+                console.log(subblog);
+               
+
+}
+
+
 
 module.exports={
     getHomePage,
@@ -93,5 +141,6 @@ module.exports={
     getCommentPage,
     sendComment,
     getFullArticle,
-    deleteComment,addCommentPage,getBackPage,getEditComment
+    deleteComment,addCommentPage,getBackPage,getEditComment,updateComment,
+    makeCommentPage,saveSubCom,getSubPost
 }

@@ -13,19 +13,20 @@
         <div id="border">
         
             <div id="commentBorder">
-                     <h2 id="userName"><%= Comment.userName %></h2>
-                  <h4  id="name">  <%= Comment.name %> </h4>
+                     <h2 id="userName"><%= blog.title %></h2>
+                  <h4  id="name">  <%= blog.post %> </h4>
              </div>
             
         </div>
 
-        <form action="/deleteUser/<%=Comment._id%>" method="post">
+        <form action="/deleteUser/<%=blog._id%>" method="post">
 
             <button>delete Post</button>
 
         </form>
     
-  <a href="/editArticle/<%=Comment._id">Edit Article</a>
+  <a href="/editArticle/<%=blog._id %>" > Edit Article</a>
+  
 
 </body>
 </html>

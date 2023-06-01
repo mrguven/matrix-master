@@ -12,17 +12,17 @@
 <body>
 
        
-
     <%- include('./partials/nav.ejs') -%>
+  
         
 
 
 
-    <!-- <%  for(let i=0;i<Comment.length;i++) { %>
+    <!-- <%  for(let i=0;i<blog.length;i++) { %>
 
             <ul>
-                <h2><%= Comment[i].userName %></h2>
-           <li>  <%= Comment[i].name %> </li>
+                <h2><%= blog[i].userName %></h2>
+           <li>  <%= blog[i].name %> </li>
         </ul>
 
 
@@ -30,17 +30,32 @@
 
 
     
-    <% Comment.forEach(function (practice) { %>
+    <% blog.forEach(function (practice) { %>
         <div id="border">
         
             <div id="commentBorder">
-                     <h2 id="userName"> <b>Title:</b> <%= practice.userName %></h2>
-                  <h4  id="name">  <b>Comment:</b> <%= practice.name.slice(0,85) %>...... </h4>
-             </div>
+                     <h2 id="userName"> <b>Title:</b> <%= practice.title %></h2>
+                <a href="/fullarticle/<%= practice._id %>">  <h4  id="name">  <b>Comment:</b> <%= practice.post.slice(0,85) %>...... </h4></a>
+
+                  
+
+                
+                
+
+
+
+                    
+
+                  <a href="/makeComment"> make comment</a>
+             
+                </div>
              <a href="/fullarticle/<%= practice._id %>">see more...</a>
 </div>
     <% }) %> 
 
+
+  
+   
 
 </body>
 
