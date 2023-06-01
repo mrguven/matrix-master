@@ -1,19 +1,25 @@
+const moment = require('moment/moment');
 const mongoose = require('mongoose');
 
 const commentSchema =mongoose.Schema({
     title:{
         type:String,
-        required:true
-    
+        required:true,
+        minlength:25
     },
     post:{
     type:String,
-    required:true
+    required:true,
+    minlength:100
     },
 
-    create_at: {
+    updated_at: {
 
-            
+         type: Date, required: true, default: Date.now ,
+        get: (createdAt)=> {
+            const date = new moment(createdAt);
+            return date.format('D/MM/YYYY  h:mm:ss a')
+        }
 
     }
 

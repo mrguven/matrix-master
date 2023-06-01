@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <%- include('./partials/nav.ejs') -%>
@@ -14,9 +15,16 @@
         <div>
             <h3>Title</h3>
         <input type="text" name="title" id="userName" minlength=25 style="margin-bottom:15px ;">
+                <% if (err1){ %>
+                    <i><%= err1['title']  %></i>
+                    <% } %>
     </div>
         <textarea type="text" name='post' rows=9 minlength=100
               placeholder="write comment"  style="width: 20%;"    ></textarea>
+              <% if (err1){ %>
+                <i><%= err1['post']  %></i>
+
+              <%} %>
         
         <button type="submit"  >Post a message</button>
     

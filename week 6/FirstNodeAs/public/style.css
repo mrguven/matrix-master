@@ -21,3 +21,32 @@ color: rgb(123, 123, 197);
 #commentBorder:hover {
     background-color: bisque;
 }
+
+.navigationWrapper{
+    width: 100%;
+    background-color: aliceblue;
+}
+
+.parent {
+    display:inline-block;
+    margin-left: 5%;
+    padding: 10px;
+}
+
+
+.parent a {
+    text-decoration: none;
+    font-family: fantasy;
+    
+   
+}
+.parent :hover {
+    
+    background-color: rgb(195, 195, 238);
+   
+}
+
+#makeComment {
+    position: relative;
+    left: 0;
+}

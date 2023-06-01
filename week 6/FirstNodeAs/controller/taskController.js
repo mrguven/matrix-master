@@ -3,7 +3,7 @@ const express=require('express')
 const {Comment,subComment} = require('../model/commentModel')
 
 const asyncHandler= require('express-async-handler')
-const { round } = require('lodash')
+const { round, update } = require('lodash')
 
 
 const getHomePage = (req,res)=> {
@@ -33,7 +33,7 @@ const sendComment = (req,res)=> {
             console.log(req.body.title);
             console.log(req.body.post);
                   blog.save().then(()=>{res.status(201).redirect('comment')})
-                 .catch(()=> res.send('you should write more than 25'));
+                 .catch((err)=> {res.render('userComment', {err1: err})});
                 console.log(blog);
                
                 
@@ -101,8 +101,10 @@ const getEditComment = (req,res)=> {
 }
 
 const updateComment=(req,res)=> {
+    
     Comment.findByIdAndUpdate(req.params.id,req.body,{new: true})
     .then((result)=> res.render('fullarticle', {blog:result})).catch(()=> res.render('404'))
+    
 
 }
 
