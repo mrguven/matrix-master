@@ -33,8 +33,8 @@ const sendComment = (req,res)=> {
             console.log(req.body.title);
             console.log(req.body.post);
                   blog.save().then(()=>{res.status(201).redirect('comment')})
-                 .catch((err)=> {res.render('userComment', {err1: err})});
-                console.log(blog);
+                 .catch((err1)=> {res.render('wrongAddCommentPage', {err1: err1.errors})});
+               
                
                 
                 console.log('did this function run');
@@ -54,7 +54,7 @@ const sendComment = (req,res)=> {
 
             const getSubPost=(req,res)=>{
                 subComment.find().sort({ createdAt: -1 })
-                .then((data)=> {res.render('comment', {subblog: data})}) 
+                .then((data)=> {res.redirect('/addComment', {subblog: data})}) 
                 .catch((err)=>console.log(err))
                
             
@@ -115,20 +115,15 @@ const makeCommentPage= (req,res)=> {
 
 const saveSubCom=(req,res)=> {
 
-    const subUserName= req.body.title;
-const subUserPost=req.body.post
+ 
 
 
     
-        const subblog= new subComment({
-                 title :subUserName,
-                    post:subUserPost
-                })
+        const subblog= new subComment(req.body)
             console.log(req.body.title);
             console.log(req.body.post);
                   subblog.save().then(()=>{res.status(201).redirect('/comment')})
-                 .catch(()=> res.render('404'));
-                console.log(subblog);
+                 .catch((err1)=> {res.render('wrongAddCommentPage', {err1: err1.errors})});
                
 
 }

@@ -16,12 +16,27 @@ const commentSchema =mongoose.Schema({
     updated_at: {
 
          type: Date, required: true, default: Date.now ,
-        get: (createdAt)=> {
-            const date = new moment(createdAt);
-            return date.format('D/MM/YYYY  h:mm:ss a')
+        get: (updatedAt)=> {
+            const date = new moment(updatedAt);
+            return date.format('D/MM/YYYY  h:mm:ss a') // it needs to make beter. when we update the post, the time should be updated.
         }
 
-    }
+    },
+
+
+// otherUserComment: {     // I try to send other user`s post to this user collection and I make a relation between them
+//     title:{
+//         type:String,
+//         required:true,
+//         minlength:25
+//     },
+//     post:{
+//     type:String,
+//     required:true,
+//     minlength:100
+//     }
+
+// }
 
 
 

@@ -4,31 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>comment Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <%- include('./partials/nav.ejs') -%>
+
+
 
     <form action="/sendComment" method="post">
         <h2>Post a message</h2>
         <div>
             <h3>Title</h3>
         <input type="text" name="title" id="userName" minlength=25 style="margin-bottom:15px ;">
-               
+          <br>
+                <% if (err1){ %>
+                    <i><%= err1['title']  %></i>
+                    <% } %>
     </div>
         <textarea type="text" name='post' rows=9 minlength=100
               placeholder="write comment"  style="width: 20%;"    ></textarea>
-             
-        <br>
+           <br>
+              <% if (err1){ %>
+                <i><%= err1['post']  %></i>
+
+              <%} %>
+        
         <button type="submit"  >Post a message</button>
     
     </form>
-
-
-
-  
-
+    
 </body>
 </html>
-
