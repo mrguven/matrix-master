@@ -117,9 +117,10 @@ const saveSubCom=(req,res)=> {
 
  
 
-
     
-        const subblog= new subComment(req.body)
+        const subblog= new Comment(req.body)
+
+        
             console.log(req.body.title);
             console.log(req.body.post);
                   subblog.save().then(()=>{res.status(201).redirect('/comment')})

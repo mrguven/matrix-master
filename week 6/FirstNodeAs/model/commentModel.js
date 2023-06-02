@@ -24,23 +24,27 @@ const commentSchema =mongoose.Schema({
     },
 
 
-// otherUserComment: {     // I try to send other user`s post to this user collection and I make a relation between them
-//     title:{
-//         type:String,
-//         required:true,
-//         minlength:25
-//     },
-//     post:{
-//     type:String,
-//     required:true,
-//     minlength:100
-//     }
+otherUserComment: {     // I try to send other user`s post to this user collection and I make a relation between them
+    title:{
+        type:String,
+        
+        minlength:25
+    },
+    post:{
+    type:String,
+   
+    minlength:100
+    }
 
-// }
+}
 
 
 
 }, {timestamps:true})
+
+
+const Comment = mongoose.model('Comment',commentSchema);
+
 
 
 
@@ -66,7 +70,6 @@ const subComment = mongoose.model('subComment',subCommentModel);
 
 
 
-const Comment = mongoose.model('Comment',commentSchema);
 
 
 module.exports = {Comment,subComment}
