@@ -1,6 +1,6 @@
 const express = require('express');
 
-const router=require('Router').Router();
+const router=express.Router();
 
 const{getHomePage,getLogInPage}= require('../controller/controller')
 
