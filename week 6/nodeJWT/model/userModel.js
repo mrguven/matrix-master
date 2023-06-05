@@ -10,9 +10,14 @@ const userInfo = new mongoose.Schema({
     userName:{type:String,
         require:[true,'not be empty']},
 
-    email:{type:email,
+    email:{type:String,
         require:[true,'not be empty']},
     phone:{type:String,
         require:[true,'not be empty']}
 })
 
+
+const userSchema= mongoose.model('userInfo',userInfo)
+
+
+module.exports=userSchema
