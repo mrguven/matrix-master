@@ -11,7 +11,16 @@ res.render('index.html')
 
 
 const getLogInPage = (req,res) => {
+res.render('login')
+}
 
+
+
+
+
+
+const getRegisterPage= (req,res)=> {
+    res.render('register')
 }
 
 
@@ -22,11 +31,4 @@ const getLogInPage = (req,res) => {
 
 
 
-
-
-
-
-
-
-
-module.exports={getHomePage,getLogInPage}
+module.exports={getHomePage,getLogInPage,getRegisterPage}

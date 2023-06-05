@@ -5,15 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../public/style.css">
 </head>
 <body>
     
+
+
+    <%- include('./partials/nav.ejs') -%>
 <!-- FORM BEGIN -->
-<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 text-center infinity-form">
-    <!-- Company Logo -->
+<div >
+   
     <div class="text-center mb-3 mt-5">
-        <img src="logo.png" width="150px">
+       
     </div>
     <div class="text-center mb-4">
         <h4>Login into account</h4>
@@ -23,11 +26,11 @@
         <!-- Input Box -->
         <div class="form-input">
             <span><i class="fa fa-envelope"></i></span>
-            <input type="email" name="" placeholder="Email Address" tabindex="10"required>
+            <input type="email" name="userName" placeholder="user name" tabindex="10"required>
         </div>
         <div class="form-input">
             <span><i class="fa fa-lock"></i></span>
-            <input type="password" name="" placeholder="Password" required>
+            <input type="password" name="password" placeholder="Password" required>
         </div>
         <div class="row mb-3">
             <!-- Remember Box -->
@@ -48,17 +51,10 @@
         <div class="text-center mb-2">
                <div class="text-center mb-3" style="color: #777;">or login with</div>
                    
-               <!-- Facebook Button -->
-               <a href="" class="btn btn-social btn-facebook"><i class="fa fa-facebook"></i></a>
-
-            <!-- Google Button -->
-            <a href="" class="btn btn-social btn-google"><i class="fa fa-google"></i></a>
-
-            <!-- Twitter Button -->
-            <a href="" class="btn btn-social btn-twitter"><i class="fa fa-twitter"></i></a>
+              
         </div>
         <div class="text-center mb-5" style="color: #777;">Don't have an account? 
-            <a class="register-link" href="register.html">Register here</a>
+            <a class="register-link" href="/register">Register here</a>
            </div>
     </form>
 </div>
