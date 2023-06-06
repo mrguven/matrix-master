@@ -25,11 +25,14 @@ const getRegisterPage= (req,res)=> {
 }
 
 
+const makeRegister= (req,res)=> {
+    
+}
 
 
 
 
 
 
-
-module.exports={getHomePage,getLogInPage,getRegisterPage}
+module.exports={getHomePage,getLogInPage,getRegisterPage,
+    makeRegister}

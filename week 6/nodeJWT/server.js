@@ -1,7 +1,7 @@
 const express =require('express');
 const app= express();
 const env= require('dotenv').config();
-
+const jwt = require('jsonwebtoken');
 const rout= require('./config/router')
 
 const dbConnection=require('./config/dbConnection')
