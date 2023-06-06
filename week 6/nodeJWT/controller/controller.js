@@ -4,7 +4,7 @@ const {userSchema,Comment} = require('../model/userModel');
 
 
 const getHomePage= (req,res)=> {
-res.render('index.html')
+res.render('index')
 
 
 }
@@ -29,7 +29,7 @@ const makeRegister= (req,res)=> {
 
         const userRegister = new userSchema(req.body);
 
-        userInfo.save().then().catch()
+        userRegister.save().then().catch()
 
 }
 

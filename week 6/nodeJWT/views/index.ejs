@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login/signup page</title>
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+<body>
+    
+
+    <%- include('./partials/nav.ejs') -%>
+
+<div class="form-container">
+
+    <div class="login-form">
+       
+        
+        <div >
+            <h4>Login into account</h4>
+        </div>
+        
+        <form class="loginClass" action="/userlogin" method="post">
+            
+            <div class="form-input">
+                <span><i class="fa fa-envelope"></i></span>
+                <input type="email" name="userName" placeholder="user name" tabindex="10"required>
+            </div>
+            <div class="form-input">
+                <span><i class="fa fa-lock"></i></span>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="row mb-3">
+           
+                <div class="checkbox">
+                   
+                        <input type="checkbox" class="custom-control-input" id="cb1">
+                           <label class="label" for="cb1">Remember me</label>
+                    </div>
+                
+               </div>
+             
+            <div class="submitButton"> 
+                <button type="submit" class="btn btn-block">Login</button>
+            </div>
+            <div class="text-right ">
+                <a href="reset.html" class="forget-link">Forgot password?</a>
+            </div>
+                 
+                  
+            
+        </form>
+    </div>
+    
+
+
+
+  
+      
+        <div class="signup-form">
+          
+          
+      
+          <form action="/userRegister" method="POST">
+            <div class="form-title">
+              <h2 class="">Register now</h2>
+              <p>
+                So you will get email for your registration
+              </p>
+            </div>
+      
+            <div class="formbold-input">
+              <div>
+                <label for="firstname" class="form-label">
+                  First name
+                </label>
+                <input
+                  type="text"  name="firstName"  id="firstname" class="formbold-form-input"/>
+              </div>
+              <div>
+                <label for="lastname" class="form-label"> Last name </label>
+                <input
+                  type="text"  name="lastName" id="lastname" class="formbold-form-input"/>
+              </div>
+              <div>
+                <label for="username" class="form-label"> User Name </label>
+                <input
+                  type="text"  name="userName" id="username" class="formbold-form-input"/>
+              </div>
+            </div>
+      
+            <div class="formbold-input">
+              <div>
+                <label for="email" class="form-label"> Email </label>
+                <input type="email" name="email" id="email"  class="formbold-form-input"/>
+              </div>
+              <div>
+                <label for="phone" class="form-label"> Phone number </label>
+                <input type="text"   name="phone"  id="phone"   class="formbold-form-input"/>
+              </div>
+            </div>
+      
+            
+      
+        
+          
+      
+      <button class="registerButton" type="submit">Register Now</button>     
+      
+
+</form>
+</div>
+</div>
+
+
+</body>
+</html>

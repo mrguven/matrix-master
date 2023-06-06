@@ -20,7 +20,7 @@ const userInfo = new mongoose.Schema({
 const userSchema= mongoose.model('userInfo',userInfo)
 
 
-module.exports={userSchema,Comment}
+
 
 
 
@@ -46,3 +46,10 @@ const commentSchema =mongoose.Schema({
 
 
 const Comment = mongoose.model('Comment',commentSchema);
+
+
+
+
+
+
+module.exports={userSchema,Comment}
