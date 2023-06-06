@@ -20,4 +20,4 @@ mongoose.connection.once('open', ()=> {
 console.log('connection error'.error);
 })
 
-module.exports=dbconnection
+module.exports=dbconnection;
