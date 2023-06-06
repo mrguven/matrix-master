@@ -1,16 +1,16 @@
 const express = require('express');
-
+const checkToken=require('../middleware/middleware')
 const router=express.Router();
 
-const{getHomePage,getLogInPage,getRegisterPage,makeRegister}= require('../controller/controller')
+const{getHomePage,makeRegister}= require('../controller/controller')
 
 
 router.get('/', getHomePage)
 
-router.get('/login', getLogInPage)
 
 
-router.get('/register', getRegisterPage)
+
+
 
 
 

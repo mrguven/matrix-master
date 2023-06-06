@@ -3,6 +3,7 @@ const {userSchema,Comment} = require('../model/userModel');
 
 
 
+
 const getHomePage= (req,res)=> {
 res.render('index')
 
@@ -11,18 +12,7 @@ res.render('index')
 
 
 
-const getLogInPage = (req,res) => {
-res.render('login')
-}
 
-
-
-
-
-
-const getRegisterPage= (req,res)=> {
-    res.render('register')
-}
 
 
 const makeRegister= (req,res)=> {
@@ -38,5 +28,5 @@ const makeRegister= (req,res)=> {
 
 
 
-module.exports={getHomePage,getLogInPage,getRegisterPage,
+module.exports={getHomePage,
     makeRegister}
