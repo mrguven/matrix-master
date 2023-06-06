@@ -20,4 +20,29 @@ const userInfo = new mongoose.Schema({
 const userSchema= mongoose.model('userInfo',userInfo)
 
 
-module.exports=userSchema
+module.exports={userSchema,Comment}
+
+
+
+
+
+const commentSchema =mongoose.Schema({
+    title:{
+        type:String,
+        required:true,
+        minlength:25
+    },
+    post:{
+    type:String,
+    required:true,
+    minlength:100
+    },
+
+  
+
+    }, {timestamps:true})
+
+
+
+
+const Comment = mongoose.model('Comment',commentSchema);

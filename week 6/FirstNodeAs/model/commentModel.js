@@ -13,34 +13,11 @@ const commentSchema =mongoose.Schema({
     minlength:100
     },
 
-    updated_at: {
+  
 
-         type: Date, required: true, default: Date.now ,
-        get: (updatedAt)=> {
-            const date = new moment(updatedAt);
-            return date.format('D/MM/YYYY  h:mm:ss a') // it needs to make beter. when we update the post, the time should be updated.
-        }
-
-    },
+    }, {timestamps:true})
 
 
-otherUserComment: {     // I try to send other user`s post to this user collection and I make a relation between them
-    title:{
-        type:String,
-        
-        minlength:25
-    },
-    post:{
-    type:String,
-   
-    minlength:100
-    }
-
-}
-
-
-
-}, {timestamps:true})
 
 
 const Comment = mongoose.model('Comment',commentSchema);

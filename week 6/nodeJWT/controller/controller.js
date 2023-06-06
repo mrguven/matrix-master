@@ -1,5 +1,5 @@
 const express = require('express');
-const userSchema = require('../model/userModel');
+const {userSchema,Comment} = require('../model/userModel');
 
 
 
@@ -26,7 +26,11 @@ const getRegisterPage= (req,res)=> {
 
 
 const makeRegister= (req,res)=> {
-    
+
+        const userRegister = new userSchema(req.body);
+
+        userInfo.save().then().catch()
+
 }
 
 
