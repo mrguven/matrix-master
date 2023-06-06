@@ -1,5 +1,5 @@
 const express = require('express');
-const {userSchema,Comment} = require('../model/userModel');
+const {userSchema,userLogIn} = require('../model/userModel');
 
 
 
@@ -15,18 +15,11 @@ res.render('index')
 
 
 
-const makeRegister= (req,res)=> {
-
-        const userRegister = new userSchema(req.body);
-
-        userRegister.save().then().catch()
-
-}
 
 
 
 
 
 
-module.exports={getHomePage,
-    makeRegister}
+
+module.exports=getHomePage

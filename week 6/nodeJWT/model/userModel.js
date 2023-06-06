@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
-const userInfo = new mongoose.Schema({
+const signUp = new mongoose.Schema({
+
+    userID:{
+        type:String
+    },
 
     firstName:{type:String,
     require:[true,'not be empty']},
@@ -13,20 +17,22 @@ const userInfo = new mongoose.Schema({
     email:{type:String,
         require:[true,'not be empty']},
     phone:{type:String,
+        require:[true,'not be empty']},
+    password:{type:String,
         require:[true,'not be empty']}
-})
+},{timestamps:true})
 
 
-const userSchema= mongoose.model('userInfo',userInfo)
-
-
-
+const userSchema= mongoose.model('signUp',signUp)
 
 
 
 
 
-const commentSchema =mongoose.Schema({
+
+
+
+const logIn =mongoose.Schema({
     title:{
         type:String,
         required:true,
@@ -45,11 +51,11 @@ const commentSchema =mongoose.Schema({
 
 
 
-const Comment = mongoose.model('Comment',commentSchema);
+const userLogIn = mongoose.model('logIn',logIn);
 
 
 
 
 
 
-module.exports={userSchema,Comment}
+module.exports={userSchema,userLogIn}
