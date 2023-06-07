@@ -1,11 +1,21 @@
 
 .form-container{
-  display: inline-block;
+  display: flex;
   border: 10px;
 }
 
+.login-form {
+  display: flex;
+ 
+  margin-left: 100px;
+}
+
+.signup-form{
+  display: flex;
+  margin-left: 100px;
+}
 
 body{
-  background-color: aqua;
+  background-color: rgb(226, 149, 149);
 }
 

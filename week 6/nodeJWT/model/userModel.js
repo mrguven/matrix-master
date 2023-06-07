@@ -36,12 +36,12 @@ const logIn =mongoose.Schema({
     title:{
         type:String,
         required:true,
-        minlength:25
+        
     },
     post:{
     type:String,
     required:true,
-    minlength:100
+   
     },
 
   
@@ -60,12 +60,12 @@ const userPostSchema =mongoose.Schema({
     title:{
         type:String,
         required:true,
-        minlength:25
+        
     },
     post:{
     type:String,
     required:true,
-    minlength:100
+    
     },
 
   

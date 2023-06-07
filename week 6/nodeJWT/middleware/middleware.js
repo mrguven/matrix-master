@@ -13,7 +13,7 @@ const checkToken = (req,res,next)=> {
 
 }
 
-const checkMainPage = (req,res,next) => {
+const checkTokenPage = (req,res,next) => {
     const isToken= req.header('cookie');
     if(isToken){
         next()
@@ -27,4 +27,4 @@ const checkMainPage = (req,res,next) => {
 
 
 
-module.exports= {checkToken,checkMainPage};
+module.exports= {checkToken,checkTokenPage};

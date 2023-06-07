@@ -15,43 +15,29 @@
     <%- include('./partials/nav.ejs') -%>
   
         
-
-
-
-    <!-- <%  for(let i=0;i<blog.length;i++) { %>
-
-            <ul>
-                <h2><%= blog[i].userName %></h2>
-           <li>  <%= blog[i].name %> </li>
-        </ul>
-
-
-        <%    }%> -->
-
-
-    
-    <% blog.forEach(function (practice) { %>
+    <% post.forEach(function (practice) { %>
         <div id="border">
         
-            <div id="commentBorder">
-                     <h2 id="userName"> <b>Title:</b> <%= practice.title %></h2>
+            <div id="PostBorder">
+                     <h2 id="title"> <b>Title:</b> <%= practice.title %></h2>
                 <a href="/post/<%= practice._id %>">  <h4  id="name">  <b>Comment:</b> <%= practice.post.slice(0,85) %>...... </h4></a>
-
+    
                   
-
+    
                 
                 <b> <%= practice.updated_at %></b>
-
-
-
+    
+    
+    
                     
-
+    
                   <a  id="makeComment" href="/makeComment"> make comment</a>
              
                 </div>
              <a href="/fullarticle/<%= practice._id %>">see more...</a>
-</div>
+    </div>
     <% }) %> 
+    
 
 
   

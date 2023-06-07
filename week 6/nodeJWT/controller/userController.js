@@ -28,7 +28,7 @@ console.log(req.body.password);
         newUserRegister.save().then(()=> {
 
         
-        res.render('logSignPage',{addMessage: 'user added',erremail: '', errpassword:"" })
+        res.render('logSignPage',{addMessage: 'user added' })
 
 
      })
@@ -68,7 +68,7 @@ const login= async (req,res) =>{
 
 const logOut =(req,res)=> {
 
-   res.clearCookies('userToken');
+   res.clearCookie('jwt-token');
    res.redirect('/')
 
 }
