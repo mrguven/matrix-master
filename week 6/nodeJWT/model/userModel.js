@@ -56,6 +56,28 @@ const userLogIn = mongoose.model('logIn',logIn);
 
 
 
+const userPostSchema =mongoose.Schema({
+    title:{
+        type:String,
+        required:true,
+        minlength:25
+    },
+    post:{
+    type:String,
+    required:true,
+    minlength:100
+    },
+
+  
+
+    }, {timestamps:true})
 
 
-module.exports={userSchema,userLogIn}
+    const postSchema = mongoose.model('userPostSchema',userPostSchema);
+
+
+
+
+
+
+module.exports={userSchema,userLogIn,postSchema}

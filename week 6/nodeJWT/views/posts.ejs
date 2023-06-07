@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+       
+    <%- include('./partials/nav.ejs') -%>
+  
+        
+
+
+
+    <!-- <%  for(let i=0;i<blog.length;i++) { %>
+
+            <ul>
+                <h2><%= blog[i].userName %></h2>
+           <li>  <%= blog[i].name %> </li>
+        </ul>
+
+
+        <%    }%> -->
+
+
+    
+    <% blog.forEach(function (practice) { %>
+        <div id="border">
+        
+            <div id="commentBorder">
+                     <h2 id="userName"> <b>Title:</b> <%= practice.title %></h2>
+                <a href="/post/<%= practice._id %>">  <h4  id="name">  <b>Comment:</b> <%= practice.post.slice(0,85) %>...... </h4></a>
+
+                  
+
+                
+                <b> <%= practice.updated_at %></b>
+
+
+
+                    
+
+                  <a  id="makeComment" href="/makeComment"> make comment</a>
+             
+                </div>
+             <a href="/fullarticle/<%= practice._id %>">see more...</a>
+</div>
+    <% }) %> 
+
+
+  
+   
+
+</body>
+
+<script>
+    
+</script>
+</html>
+
+    

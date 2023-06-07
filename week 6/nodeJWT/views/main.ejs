@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') -%>
+<h1>welkom to your world</h1>
+
+
+
+
+
+
+
+
+
+
+<form action="/sendPost" method="post">
+    <h2>Post a message</h2>
+    <div>
+
+       
+
+        <h3>Title</h3>
+    <input type="text" name="title" id="title"  style="margin-bottom:15px ;">
+           
+</div>
+    <textarea type="text" name='post' rows=9 
+          placeholder="write comment"  style="width: 20%;"    ></textarea>
+         
+    <br>
+    <button type="submit"  >Post a message</button>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% post.forEach(function (practice) { %>
+    <div id="border">
+    
+        <div id="PostBorder">
+                 <h2 id="title"> <b>Title:</b> <%= practice.title %></h2>
+            <a href="/post/<%= practice._id %>">  <h4  id="name">  <b>Comment:</b> <%= practice.post.slice(0,85) %>...... </h4></a>
+
+              
+
+            
+            <b> <%= practice.updated_at %></b>
+
+
+
+                
+
+              <a  id="makeComment" href="/makeComment"> make comment</a>
+         
+            </div>
+         <a href="/fullarticle/<%= practice._id %>">see more...</a>
+</div>
+<% }) %> 
+
+
+
+
+
+</body>
+</html>

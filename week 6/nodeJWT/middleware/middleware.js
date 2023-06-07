@@ -1,8 +1,25 @@
 const express= require('express');
 
 
-const checkToken = ()=> {
+const checkToken = (req,res,next)=> {
 
+    const isToken= req.header('cookie');
+    if(!isToken){
+        next()
+    }else {
+        res.redirect('/main')
+    }
+
+
+}
+
+const checkMainPage = (req,res,next) => {
+    const isToken= req.header('cookie');
+    if(isToken){
+        next()
+    }else {
+        res.redirect('/')
+    }
 
 }
 
@@ -10,5 +27,4 @@ const checkToken = ()=> {
 
 
 
-
-module.exports= checkToken;
+module.exports= {checkToken,checkMainPage};

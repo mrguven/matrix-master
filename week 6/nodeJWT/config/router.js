@@ -1,22 +1,13 @@
 const express = require('express');
-const checkToken=require('../middleware/middleware')
+const {checkToken,checkMainPage}=require('../middleware/middleware')
 const router=express.Router();
 
-const getHomePage= require('../controller/controller')
+const {getloginSignUpPage,getMainPage,sendPost,getPost}= require('../controller/controller')
  
-const makeRegister= require('../controller/userController')
+const {makeRegister,login,logOut}= require('../controller/userController')
 
 
-router.get('/', getHomePage)
-
-
-
-
-
-
-
-
-router.post('/userRegister', makeRegister)
+router.get('/',checkToken, getloginSignUpPage)
 
 
 
@@ -24,6 +15,17 @@ router.post('/userRegister', makeRegister)
 
 
 
+
+router.post('/userRegister', makeRegister);
+
+router.post('/userlogin', login)
+
+
+router.get('/main',checkMainPage,getMainPage,getPost)
+
+router.post('/logOut', logOut)
+
+router.post('/sendPost', sendPost)
 
 
 module.exports=router;
