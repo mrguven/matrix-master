@@ -68,7 +68,7 @@ const login= async (req,res) =>{
 
 const logOut =(req,res)=> {
 
-   res.clearCookie('userToken');
+   res.clearCookies('userToken');
    res.redirect('/')
 
 }
