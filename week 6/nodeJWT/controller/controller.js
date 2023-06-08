@@ -29,7 +29,7 @@ const sendPost = async (req,res)=> {
     const userPost = new postSchema(req.body)
 
         await userPost.save().then(()=> {
-            res.render('main', )
+            res.render('main' )
         }).catch((er)=>  {console.log(er);})
 }
 
