@@ -9,6 +9,11 @@
 </head>
 <body>
     <%- include('./partials/nav.ejs') -%>
+    <%if (user){ %>
+    <%=  user%>
+    <%} %>
+
+    <h3>user</h3>
 <h1>welkom to your world</h1>
 
 
@@ -51,17 +56,17 @@
 
 
 
-<% post.forEach(function (practice) { %>
+
     <div id="border">
     
         <div id="PostBorder">
-                 <h2 id="title"> <b>Title:</b> <%= practice.title %></h2>
-            <a href="/post/<%= practice._id %>">  <h4  id="name">  <b>Comment:</b> <%= practice.post.slice(0,85) %>...... </h4></a>
+                 <h2 id="title"> <b>Title:</b> </h2>
+            <a  <h4  id="name">  <b>Comment:</b> ...... </h4></a>
 
               
 
             
-            <b> <%= practice.updated_at %></b>
+           
 
 
 
@@ -70,9 +75,9 @@
               <a  id="makeComment" href="/makeComment"> make comment</a>
          
             </div>
-         <a href="/fullarticle/<%= practice._id %>">see more...</a>
+         
 </div>
-<% }) %> 
+
 
 
 

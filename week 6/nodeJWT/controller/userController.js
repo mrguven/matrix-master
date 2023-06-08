@@ -45,7 +45,9 @@ console.log(req.body.password);
 
 const login= async (req,res) =>{
 
-  const checkUser= await userSchema.findOne({email:req.body.email })
+  const checkUser= await userSchema.findOne({email:req.body.email });
+
+
 
   if(!checkUser) {
    res.render('logSignPage',{error: 'user is not exist'})
@@ -55,9 +57,16 @@ const login= async (req,res) =>{
    if(!checkPassword) {
       res.render('/logSignPage',{error:'user password is not correct'})
    } else {
-      const userToken=jwt.sign({checkUser},process.env.JWT_SECRET);
+      const userObj= {
+         userName:checkUser.userName,
+         firstName: checkUser.firstName,
+         lastName:checkUser.lastName,
+         email:checkUser.email,
+      userID: checkUser._id
+        }
+      const userToken=jwt.sign({userObj},process.env.JWT_SECRET);
       console.log(userToken);
-      res.cookie('jwt-token',userToken,{httpOnly:true});
+      res.cookie('userToken',userToken,{httpOnly:true});
       res.redirect('/main')
    }
 
@@ -68,7 +77,7 @@ const login= async (req,res) =>{
 
 const logOut =(req,res)=> {
 
-   res.clearCookie('jwt-token');
+   res.clearCookie('userToken');
    res.redirect('/')
 
 }

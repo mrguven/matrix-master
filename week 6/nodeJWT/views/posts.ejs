@@ -13,7 +13,10 @@
 
        
     <%- include('./partials/nav.ejs') -%>
-  
+    
+    <%if (user){ %>
+  <b>  User Name: <%=  user%></b>
+    <%} %>
         
     <% post.forEach(function (practice) { %>
         <div id="border">

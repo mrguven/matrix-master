@@ -1,5 +1,5 @@
 const express = require('express');
-const {checkToken,checkTokenPage,}=require('../middleware/middleware')
+const {checkToken,checkTokenPage,ifToken}=require('../middleware/middleware')
 const router=express.Router();
 
 const {getloginSignUpPage,getMainPage,sendPost,getPostPage}= require('../controller/controller')
@@ -25,7 +25,7 @@ router.get('/main',checkTokenPage,getMainPage)
 
 router.post('/logOut', logOut)
 
-router.post('/sendPost', sendPost)
+router.post('/sendPost',ifToken, sendPost)
 
 
 router.get('/post',checkTokenPage,getPostPage)
