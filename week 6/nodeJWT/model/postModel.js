@@ -13,13 +13,9 @@ const userPostSchema =mongoose.Schema({
     required:true,
     
     },
-    userId: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'signUp'
-    },
-    userName: {
-        type: String,
-       
     }
 
     

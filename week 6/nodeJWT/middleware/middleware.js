@@ -49,8 +49,8 @@ const ifToken = async(req,res,next) => {
               console.log(err);
           } else {
              res.locals.user = userInfo.userObj.userName;
-             res.locals.userId = userInfo.userObj.userId;
-              
+             res.locals.usId = userInfo.userObj.userId;
+             console.log('midd'+res.locals.usId);
               next();
           }
       })}

@@ -47,12 +47,12 @@ const login= async (req,res) =>{
 
   const checkUser= await userInfo.findOne({email:req.body.email });
 
-
+  console.log(checkUser);
 
   if(!checkUser) {
    res.render('logSignPage',{error: 'user is not exist'})
   } else {
-   const checkPassword=await bcrypt.compareSync(req.body.password,checkUser.password);
+   const checkPassword= bcrypt.compareSync(req.body.password,checkUser.password);
 
    if(!checkPassword) {
       res.render('/logSignPage',{error:'user password is not correct'})
@@ -64,8 +64,9 @@ const login= async (req,res) =>{
          email:checkUser.email,
       userId: checkUser._id
         }
+        console.log(userObj);
       const userToken=jwt.sign({userObj},process.env.JWT_SECRET);
-      console.log(userToken);
+      
       res.cookie('userToken',userToken,{httpOnly:true});
       res.redirect('/main')
    }

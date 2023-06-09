@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const signUp = new mongoose.Schema({
 
-    userID:{
+    userId:{
         type:String
     },
 

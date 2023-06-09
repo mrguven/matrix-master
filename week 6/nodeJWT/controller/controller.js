@@ -19,7 +19,7 @@ res.render('logSignPage')
 
 const getMainPage = (req,res)=> {
 
-    postSchema.find().sort({ createdAt: -1 }).populate("userId")
+    postSchema.find().sort({ createdAt: -1 }).populate("user")
                         .then((data)=> {res.render('main', {post: data})}) 
                         .catch((err)=>console.log(err))
 
@@ -30,8 +30,8 @@ const sendPost = async (req,res)=> {
 
     let postObj = {
         ...req.body,
-        userId: req.params.id,
-        userName:req.params.user
+        user: req.params.id,
+        
         
     };
 

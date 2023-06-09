@@ -25,9 +25,12 @@ router.get('/main',checkTokenPage,getMainPage)
 
 router.post('/logOut', logOut)
 
-router.post('/sendPost/:id/:user',ifToken, sendPost)
+router.post('/sendPost/:id',ifToken, sendPost)
 
 
-router.get('/post',checkTokenPage,getPostPage)
+router.get('/post',checkTokenPage,getPostPage);
+
+
+router.post('/deletePost',)
 
 module.exports=router;
