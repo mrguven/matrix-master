@@ -18,16 +18,16 @@ const checkToken = (req,res,next)=> {
 }
 
 
-const checkTokenPage = async(req,res,next) => {
+const checkTokenPage = (req,res,next) => {
     const isToken= req.cookies.userToken;
 
     if(isToken){
-        await  jwt.verify(isToken, process.env.JWT_SECRET,  (err, userInfo) => {
+          jwt.verify(isToken, process.env.JWT_SECRET, async (err, userInfo) => {
             if(err){
                 console.log(err);
             } else {
                res.locals.user = userInfo.userObj.userName;
-              
+               res.locals.usId = userInfo.userObj.userId;
                 
                 next();
             }
@@ -44,18 +44,23 @@ const ifToken = async(req,res,next) => {
     const isToken= req.cookies.userToken;
 
     if(isToken){
+        jwt.verify(isToken, process.env.JWT_SECRET, async (err, userInfo) => {
+          if(err){
+              console.log(err);
+          } else {
+             res.locals.user = userInfo.userObj.userName;
+             res.locals.userId = userInfo.userObj.userId;
+              
+              next();
+          }
+      })}
+      else {
         
-                
-                next();
-            
-        
-    }else {
-       
         res.redirect('/')
     }
 
-}
 
+}
 
 
 

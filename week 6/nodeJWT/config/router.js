@@ -25,7 +25,7 @@ router.get('/main',checkTokenPage,getMainPage)
 
 router.post('/logOut', logOut)
 
-router.post('/sendPost',ifToken, sendPost)
+router.post('/sendPost/:id/:user',ifToken, sendPost)
 
 
 router.get('/post',checkTokenPage,getPostPage)

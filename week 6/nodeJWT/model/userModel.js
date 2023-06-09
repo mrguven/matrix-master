@@ -23,7 +23,7 @@ const signUp = new mongoose.Schema({
 },{timestamps:true})
 
 
-const userSchema= mongoose.model('signUp',signUp)
+const userInfo= mongoose.model('signUp',signUp);
 
 
 
@@ -32,52 +32,16 @@ const userSchema= mongoose.model('signUp',signUp)
 
 
 
-const logIn =mongoose.Schema({
-    title:{
-        type:String,
-        required:true,
-        
-    },
-    post:{
-    type:String,
-    required:true,
-   
-    },
-
-  
-
-    }, {timestamps:true})
-
-
-
-
-const userLogIn = mongoose.model('logIn',logIn);
-
-
-
-
-const userPostSchema =mongoose.Schema({
-    title:{
-        type:String,
-        required:true,
-        
-    },
-    post:{
-    type:String,
-    required:true,
-    
-    },
-
-  
-
-    }, {timestamps:true})
-
-
-    const postSchema = mongoose.model('userPostSchema',userPostSchema);
 
 
 
 
 
 
-module.exports={userSchema,userLogIn,postSchema}
+
+
+
+
+
+
+module.exports=userInfo;

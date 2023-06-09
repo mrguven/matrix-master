@@ -19,3 +19,10 @@ body{
   background-color: rgb(226, 149, 149);
 }
 
+#border {
+  border: 1px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(226, 149, 149);
+}
+

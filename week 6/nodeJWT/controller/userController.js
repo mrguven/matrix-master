@@ -1,5 +1,5 @@
 const express = require('express');
-const {userSchema,postSchema} = require('../model/userModel');
+const userInfo = require('../model/userModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { error } = require('jquery');
@@ -7,7 +7,7 @@ const { error } = require('jquery');
 
 const makeRegister= async (req,res)=> {
 
-    const checkUser= await userSchema.findOne({email:req.body.email})
+    const checkUser= await userInfo.findOne({email:req.body.email})
 
  if(checkUser) {
      res.render('logSignPage',{errmail: 'this email already exist', errpassword:"" })
@@ -23,7 +23,7 @@ console.log(req.body.password);
      }
 
      console.log(userRegister);
-        const     newUserRegister = new userSchema(userRegister);
+        const     newUserRegister = new userInfo(userRegister);
 
         newUserRegister.save().then(()=> {
 
@@ -45,7 +45,7 @@ console.log(req.body.password);
 
 const login= async (req,res) =>{
 
-  const checkUser= await userSchema.findOne({email:req.body.email });
+  const checkUser= await userInfo.findOne({email:req.body.email });
 
 
 
@@ -62,7 +62,7 @@ const login= async (req,res) =>{
          firstName: checkUser.firstName,
          lastName:checkUser.lastName,
          email:checkUser.email,
-      userID: checkUser._id
+      userId: checkUser._id
         }
       const userToken=jwt.sign({userObj},process.env.JWT_SECRET);
       console.log(userToken);
