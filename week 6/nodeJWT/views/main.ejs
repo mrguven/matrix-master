@@ -26,7 +26,7 @@
 
 
 
-<form action="/sendPost/<%=usId%>/<%= user%>" method="post">
+<form action="/sendPost/<%=usId%>" method="post">
     <h2>Post a message</h2>
     <div>
 
@@ -69,16 +69,15 @@
             <a  <h4  id="name">  <b></b><%=postObj.post %>  </h4></a>
             <br>
 
-                          <p>created by  <b> <i><%=postObj.userName %></i> </b> </p>
+                          <p>created by  <b> <i><%=postObj.user.userName.toString() %></i> </b> </p>
             
                         
-                        
-      <% if(postObj.userId == usId) { %>
+      <% if(postObj.user._id.toString() === usId) { %>
         <form action="editPost" method="get">
             <button type="submit">Edit</button>
         </form>
         
-        <form action="deletePost" method="post">
+        <form action="/deletePost" method="post">
             <button type="submit">delete Post</button>
         </form>
           
