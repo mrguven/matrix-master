@@ -9,12 +9,12 @@
 </head>
 <body>
     <%- include('./partials/nav.ejs') -%>
+    
     <%if (user){ %>
-    <%=  user%>
+          <h1>welkom to your world :<i> <%=  user%></i></h1>
     <%} %>
 
-    <h3>user</h3>
-<h1>welkom to your world</h1>
+   
 
 
 
@@ -25,7 +25,8 @@
 
 
 
-<form action="/sendPost" method="post">
+
+<form action="/sendPost/<%=usId%>/<%= user%>" method="post">
     <h2>Post a message</h2>
     <div>
 
@@ -39,7 +40,7 @@
           placeholder="write comment"  style="width: 20%;"    ></textarea>
           
     <br>
-    <button type="submit"  >Post a message</button>
+    <button type="submit"  >Post </button>
 
 </form>
 
@@ -56,26 +57,42 @@
 
 
 
-
-    <div id="border">
+<% if (post) {%>
+ 
     
-        <div id="PostBorder">
-                 <h2 id="title"> <b>Title:</b> </h2>
-            <a  <h4  id="name">  <b>Comment:</b> ...... </h4></a>
-
-              
-
+       
             
-           
+                <% post.forEach(postObj => { %>
+                    <div id="border">
+                        <div id="PostBorder">
+                 <h2 id="title"> <b>Title:</b><%=postObj.title %> </h2>
+            <a  <h4  id="name">  <b></b><%=postObj.post %>  </h4></a>
+            <br>
+
+                          <p>created by  <b> <i><%=postObj.userName %></i> </b> </p>
+            
+                        
+                        
+      <% if(postObj.userId == usId) { %>
+        <form action="editPost" method="get">
+            <button type="submit">Edit</button>
+        </form>
+        
+        <form action="deletePost" method="post">
+            <button type="submit">delete Post</button>
+        </form>
+          
+                            
+                        <% } %>
 
 
 
-                
-
-              <a  id="makeComment" href="/makeComment"> make comment</a>
-         
+              <br>
+             <a  id="makeComment" href="/makeComment"> make comment</a>
+             <a href="/fullarticle/<%= postObj._id %>">see more...</a>
             </div>
-         
+        </div>
+        <% })}%>
 </div>
 
 
